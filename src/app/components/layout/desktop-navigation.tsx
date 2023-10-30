@@ -12,7 +12,7 @@ const links = [
 function Navbar() {
   return (
     <>
-      <div className="hidden fixed  mt-5 lg:inline-flex  w-5/6 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
+      <div className="hidden fixed  mt-5 lg:inline-flex  w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
         <Link href="/">
           <img
             className="w-16 h-18"

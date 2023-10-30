@@ -17,11 +17,11 @@ export default function Landing() {
       <div className="w-[340px] h-[490px] flex-col justify-start items-start gap-16 inline-flex">
         <div className="self-stretch h-[226px] flex-col justify-start items-center gap-4 flex">
           <div className="self-stretch text-center " style={machina.style}>
-            <span className="text-white text-3xl font-extrabold  leading-[30px]">
+            <span className="text-white text-4xl font-extrabold  leading-[30px]">
               We{" "}
             </span>
             <span
-              className="text-3xl font-extrabold text-transparent bg-clip-text
+              className="text-4xl font-extrabold text-transparent bg-clip-text
                     bg-gradient-to-b from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Design
@@ -31,12 +31,12 @@ export default function Landing() {
               Highly Functional and Robust{" "}
             </span>
             <span
-              className="text-3xl font-extrabold text-transparent bg-clip-text
+              className="text-4xl font-extrabold text-transparent bg-clip-text
                     bg-gradient-to-r from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Products
             </span>
-            <span className="text-white text-3xl font-extrabold leading-[30px]">
+            <span className="text-white text-4xl font-extrabold leading-[30px]">
               {" "}
               & Processes
             </span>

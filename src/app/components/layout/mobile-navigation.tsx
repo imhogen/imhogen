@@ -20,7 +20,10 @@ function Dropdown() {
 
   return (
     <>
-      <div className="fixed px-10 bg-transparent backdrop-blur-xl w-full md:hidden h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50">
+      <div
+        className="fixed px-5 bg-transparent backdrop-blur-xl w-full md:hidden 
+                  h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50"
+      >
         <Link href="/">
           <img
             className="w-10 h-12"

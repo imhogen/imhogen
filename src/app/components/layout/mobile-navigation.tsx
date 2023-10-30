@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 const links = [
   { text: "Home", href: "/" },
@@ -14,11 +13,6 @@ const links = [
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const sidebarVariants = {
-    hidden: { x: "100%", transition: { type: "tween", duration: 0.5 } },
-    visible: { x: 0, transition: { type: "tween", duration: 0.5 } },
-  };
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -42,12 +36,12 @@ function Dropdown() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#EF7D00"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
             onClick={() => setIsOpen(false)}
-            className="cursor-pointer"
+            className=""
           >
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
@@ -59,12 +53,12 @@ function Dropdown() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#EF7D00"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
             onClick={() => setIsOpen(true)}
-            className="cursor-pointer"
+            className=""
           >
             <line x1="4" x2="20" y1="12" y2="12" />
             <line x1="4" x2="20" y1="6" y2="6" />

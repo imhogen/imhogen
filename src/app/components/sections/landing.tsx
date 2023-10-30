@@ -26,7 +26,7 @@ export default function Landing() {
             >
               Design
             </span>
-            <span className="text-white text-3xl font-extrabold  leading-[30px]">
+            <span className="text-white text-4xl font-extrabold  leading-[30px]">
               {" "}
               Highly Functional and Robust{" "}
             </span>
@@ -41,7 +41,10 @@ export default function Landing() {
               & Processes
             </span>
           </div>
-          <div className="self-stretch text-center text-stone-300 text-opacity-50 text-base font-normal  leading-normal">
+          <div
+            className="self-stretch text-center text-stone-300 text-opacity-50 text-base font-normal  leading-normal"
+            style={redhat.style}
+          >
             {texts.home}
           </div>
         </div>

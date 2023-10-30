@@ -14,41 +14,42 @@ const redhat = localFont({
 export default function Landing() {
   return (
     <>
-      <div className="w-[340px] h-[490px] flex-col justify-start items-start gap-16 inline-flex">
-        <div className="self-stretch h-[226px] flex-col justify-start items-center gap-4 flex">
-          <div className="self-stretch text-center " style={machina.style}>
-            <span className="text-white text-3xl font-extrabold  leading-[30px]">
+      <div className="w-full h-fit flex-col lg:flex-row justify-center items-center gap-16 flex">
+        <div className=" h-[226px] flex-col justify-start items-center gap-4 flex">
+          <div className=" text-center lg:text-left" style={machina.style}>
+            <span className="text-white text-2xl md:text-5xl md:leading-10 font-extrabold  leading-[30px]">
               We{" "}
             </span>
             <span
-              className="text-3xl font-extrabold text-transparent bg-clip-text
+              className="text-2xl md:text-5xl md:leading-10 font-extrabold text-transparent bg-clip-text
                     bg-gradient-to-b from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Design
             </span>
-            <span className="text-white text-3xl font-extrabold  leading-[30px]">
+            <span className="text-white text-2xl md:text-5xl md:leading-10 font-extrabold  leading-[30px]">
               {" "}
               Highly Functional and Robust{" "}
             </span>
             <span
-              className="text-3xl font-extrabold text-transparent bg-clip-text
+              className="text-2xl md:text-5xl md:leading-10 font-extrabold text-transparent bg-clip-text
                     bg-gradient-to-r from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Products
             </span>
-            <span className="text-white text-3xl font-extrabold leading-[30px]">
+            <span className="text-white text-2xl md:text-5xl md:leading-10 font-extrabold leading-[30px]">
               {" "}
               & Processes
             </span>
           </div>
           <div
-            className="self-stretch text-center text-stone-300 text-opacity-50 text-base font-normal  leading-normal"
+            className=" md:w-5/6  text-center lg:text-left lg:w-full text-stone-300 text-opacity-50
+                             text-base font-normal  leading-normal"
             style={redhat.style}
           >
             {texts.home}
           </div>
         </div>
-        <div className="w-full max-w-full ">
+        <div className="w-full max-w-full flex justify-center ">
           <Image
             src="/images/pile.png"
             alt="image"

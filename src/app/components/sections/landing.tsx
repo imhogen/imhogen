@@ -14,63 +14,45 @@ const redhat = localFont({
 export default function Landing() {
   return (
     <>
-      <div className=" relative  w-full h-screen  items-center inline-flex">
-        <div className="flex-col w-1/2 justify-center items-start gap-8 inline-flex">
-          <div style={machina.style}>
-            <span
-              className="text-white text-5xl font-extrabold 
-                            font-['Neue Machina']
-                           leading-[60px]"
-            >
+      <div className="w-[340px] h-[490px] flex-col justify-start items-start gap-16 inline-flex">
+        <div className="self-stretch h-[226px] flex-col justify-start items-center gap-4 flex">
+          <div className="self-stretch text-center " style={machina.style}>
+            <span className="text-white text-3xl font-extrabold  leading-[30px]">
               We{" "}
             </span>
             <span
-              className="text-5xl font-extrabold  dark:shadow-xl mt-5 
-                    text-transparent bg-clip-text
-                    bg-gradient-to-b from-[#EF7D00] to-amber-200
-                    text-center leading-[60px]"
+              className="text-3xl font-extrabold text-transparent bg-clip-text
+                    bg-gradient-to-b from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Design
             </span>
-            <span
-              className="text-white text-5xl font-extrabold font-['Neue Machina'] 
-                            leading-[60px]"
-            >
+            <span className="text-white text-3xl font-extrabold  leading-[30px]">
               {" "}
               Highly Functional and Robust{" "}
             </span>
             <span
-              className=" text-5xl font-extrabold  dark:shadow-xl mt-5 
-                    text-transparent bg-clip-text
-                    bg-gradient-to-r from-[#EF7D00] to-amber-200
-                    text-center leading-[60px]"
+              className="text-3xl font-extrabold text-transparent bg-clip-text
+                    bg-gradient-to-r from-[#EF7D00] to-amber-200 leading-[30px]"
             >
               Products
             </span>
-            <span
-              className="text-white text-5xl font-extrabold font-['Neue Machina'] 
-                            leading-[60px]"
-            >
+            <span className="text-white text-3xl font-extrabold leading-[30px]">
               {" "}
               & Processes
             </span>
           </div>
-          <div
-            className="self-stretch text-stone-300 text-opacity-50 text-xl 
-            font-normal "
-            style={redhat.style}
-          >
+          <div className="self-stretch text-center text-stone-300 text-opacity-50 text-base font-normal  leading-normal">
             {texts.home}
           </div>
         </div>
-        <div
-          className="w-1/2 h-[660px] py-[50px] bg-gradient-to-l  rounded-tr-[48px]
-                 rounded-br-[48px]
-                 flex-col  inline-flex"
-        >
-          <div className="w-full self-stretch grow shrink basis-0 relative">
-            <Image src="/images/pile.png" alt="image" layout="fill" />
-          </div>
+        <div className="w-full max-w-full ">
+          <Image
+            src="/images/pile.png"
+            alt="image"
+            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            height={1024}
+            width={600}
+          />
         </div>
       </div>
     </>

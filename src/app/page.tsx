@@ -11,9 +11,6 @@ export default function Home() {
       className="flex min-h-screen flex-col items-center  
                    w-11/12 mx-auto "
     >
-      <Navbar />
-      <Slider />
-      <Dropdown />
       {/* Home */}
       <section className="flex flex-col relative top-20 md:top-36  gap-10">
         <Landing />

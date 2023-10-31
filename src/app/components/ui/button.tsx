@@ -1,9 +1,5 @@
 import React from "react";
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
-  className?: string; // Allow custom classes to be passed
-}
+import { ButtonProps } from "../../../../Types";
 
 function Button({ className, text, ...rest }: ButtonProps) {
   // Combine the default button classes with any custom classes passed

@@ -22,7 +22,7 @@ function Navbar() {
         </Link>
 
         <div
-          className="px-4 py-2 bg-transparent rounded-lg border border-1
+          className="px-4 py-2  rounded-lg border border-1
                      border-gray-200 border-opacity-20 backdrop-blur-2xl 
                      justify-start items-center gap-8 flex"
         >

@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 body {
-  box-sizing: border-box;
-  margin: 0;
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 90 90'%3E%3Ccircle fill-opacity='0.2' fill='%23DB4215' cx='45' cy='45' r='5'/%3E%3Cg fill='%23000000' fill-opacity='0.2'%3E%3Ccircle cx='0' cy='90' r='29'/%3E%3Ccircle cx='90' cy='90' r='29'/%3E%3Ccircle cx='90' cy='0' r='29'/%3E%3Ccircle cx='0' cy='0' r='29'/%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faffe8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23160302'/%3E%3Cstop offset='1' stop-color='%230C0016'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='4' height='4' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23FAFFE8' cx='2' cy='2' r='2'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.01'/%3E%3C/svg%3E");
+  background-attachment: fixed;
 }
 
 .show-navigation span {
@@ -20,4 +23,12 @@ body {
 }
 .show-navigation:hover span {
   max-width: 24rem;
+}
+
+.imho-gradient-text-to-r {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#EF7D00] to-amber-200;
+}
+
+.imho-gradient-text-to-b {
+  @apply text-transparent bg-clip-text bg-gradient-to-b from-[#EF7D00] to-amber-200;
 }

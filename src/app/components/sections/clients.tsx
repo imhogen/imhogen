@@ -1,10 +1,8 @@
 import React from "react";
-import { clients } from "../../../../contents/mapped";
 import Image from "next/image";
-import localFont from "@next/font/local";
-const machina = localFont({
-  src: "../../../../fonts/NeueMachina-Ultrabold.otf",
-});
+
+import { client } from "../../../../contents/mapped";
+import { machina } from "../exports";
 
 export default function Clients() {
   return (
@@ -29,7 +27,7 @@ export default function Clients() {
       </div>
       <div className="w-full flex justify-center items-center">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-28">
-          {clients.map((item, index) => (
+          {client.map((item, index) => (
             <div key={index} className="flex items-center justify-center">
               <Image src={item.src} alt="image" width={200} height={200} />
             </div>

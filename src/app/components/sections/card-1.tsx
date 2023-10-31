@@ -2,13 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { value } from "../../../../contents/mapped";
-import localFont from "@next/font/local";
-const machina = localFont({
-  src: "../../../../fonts/NeueMachina-Ultrabold.otf",
-});
-const redhat = localFont({
-  src: "../../../../fonts/RedHatDisplay-VariableFont_wght.ttf",
-});
+import { machina, redhat } from "../exports";
 
 export default function Card() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +20,7 @@ export default function Card() {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="flex w-full h-full flex-col md:flex-row gap-5    "
+      className="grid grid-cols-1 md:grid-cols-2  w-full space-y-5 "
     >
       {value.map((item, index) => (
         <div

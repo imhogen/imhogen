@@ -18,28 +18,36 @@ export const value: valueProps[] = [
 export const client: clientsProps[] = [
   {
     src: "/images/ic.png",
+    alt: "ic logo",
   },
   {
     src: "/images/KBI.png",
+    alt: "kbi logo",
   },
   {
     src: "/images/COE.png",
+    alt: "coe logo",
   },
   {
     src: "/images/SMIDO.png",
+    alt: "smido logo",
   },
   {
     src: "/images/tcc_knust.png",
+    alt: "tcc logo",
   },
   {
     src: "/images/Commeph.png",
+    alt: "commaph logo",
   },
   {
     src: "/images/abu_diyah.png",
+    alt: "abu diya logo",
   },
 
   {
     src: "/images/TF_AFRICA.png",
+    alt: "tf Africa logo",
   },
 ];
 

@@ -6,6 +6,7 @@ export interface valueProps {
 
 export interface clientsProps {
   src: string;
+  alt: string;
 }
 
 export interface PortfolioProps {

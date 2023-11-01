@@ -12,6 +12,8 @@ export interface PortfolioProps {
   count: string;
   title: string;
   description: string;
+  Src: string;
+  alt: string;
 }
 
 export interface ButtonProps

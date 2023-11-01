@@ -23,7 +23,7 @@ export default function Clients() {
               key={index}
               className="flex w-24 h-24 lg:w-36 lg:h-24 items-center justify-center"
             >
-              <Image src={item.src} alt="image" width={200} height={200} />
+              <Image src={item.src} alt={item.alt}width={200} height={200} />
             </div>
           ))}
         </div>

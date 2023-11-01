@@ -14,11 +14,12 @@ export default function Home() {
         </>
         {/* cleints and partners */}
         <Clients />
-        <Portfolio />
       </section>
 
       {/* portfolio */}
-      <section className="flex flex-col relative top-20 md:top-36  gap-10"></section>
+      <section className="flex flex-col relative top-20 md:top-36  gap-10">
+        <Portfolio />
+      </section>
     </main>
   );
 }

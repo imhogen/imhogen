@@ -3,10 +3,10 @@ import { Landing, Portfolio, Value, Clients } from "./components/exports";
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen flex-col justify-center items-center  
-                   w-screen mx-auto "
+      className="  flex min-h-screen flex-col justify-center items-center  
+                   w-screen mx-auto py-20 lg:py-0"
     >
-      <section className="flex flex-col relative w-full top-10  gap-10 items-center">
+      <section className="flex flex-col relative w-full h-fit   gap-10 items-center">
         {/* Home */}
         <>
           <Landing />

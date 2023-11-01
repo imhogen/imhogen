@@ -20,17 +20,17 @@ export default function Card() {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="grid grid-cols-1 md:grid-cols-2  w-full space-y-5 "
+      className="grid grid-cols-1 md:grid-cols-2  h-full w-11/12 gap-5 mx-auto py-10 "
     >
       {value.map((item, index) => (
         <div
           key={index}
-          className="w-full lg:w-4/5 lg:mt-10 h-full lg:h-96 px-5 py-5  bg-white rounded-2xl flex-col  items-center gap-3 inline-flex"
+          className="w-full lg:w-11/12  h-full px-5 py-5  lg:px-10 mx-auto  bg-white rounded-2xl flex-col  items-center gap-3 inline-flex"
         >
           <div className="w-48 relative">
             <img src={item.src} width={200} height={200} alt="icon" />
           </div>
-          <div>
+          <div className="flex flex-col gap-5">
             <h1
               className=" text-black text-2xl font-extrabold text-center lg:text-left leading-8"
               style={machina.style}

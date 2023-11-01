@@ -28,9 +28,21 @@ export default function Landing() {
             {texts.home}
           </div>
         </div>
-        <div className="w-full max-w-full flex  justify-center  ">
+        {/* image for dektop */}
+        <div className="w-full max-w-full  justify-center hidden lg:flex  ">
           <Image
             src="/images/pile.png"
+            alt="image"
+            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            height={1084}
+            width={650}
+          />
+        </div>
+
+        {/* image for mobile and tablet */}
+        <div className="w-full max-w-full flex  justify-center lg:hidden  ">
+          <Image
+            src="/images/hero-image-md.png"
             alt="image"
             sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
             height={1084}

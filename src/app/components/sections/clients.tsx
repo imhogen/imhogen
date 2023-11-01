@@ -7,28 +7,22 @@ import { machina } from "../exports";
 export default function Clients() {
   return (
     <div
-      className="w-full flex-col justify-center items-center gap-10 flex"
+      className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex"
       style={machina.style}
     >
-      <div className="text-center">
-        <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-          Some{" "}
-        </span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EF7D00] to-amber-200 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-          Clients
-        </span>
-        <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-          {" "}
-          and{" "}
-        </span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EF7D00] to-amber-200 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-          Partners
-        </span>
+      <div className="text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+        <span className="text-white text-2xl ">Some </span>
+        <span className="imho-gradient-text-to-r text-2xl ">Clients</span>
+        <span className="text-white text-2xl "> and </span>
+        <span className="imho-gradient-text-to-b text-2xl ">Partners</span>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-28">
+        <div className=" grid grid-cols-2 md:grid-cols-4 gap-24 lg:gap-52">
           {client.map((item, index) => (
-            <div key={index} className="flex items-center justify-center">
+            <div
+              key={index}
+              className="flex w-24 h-24 lg:w-36 lg:h-24 items-center justify-center"
+            >
               <Image src={item.src} alt="image" width={200} height={200} />
             </div>
           ))}

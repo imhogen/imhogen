@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const links = [
   { text: "Home", href: "/" },
@@ -27,10 +28,12 @@ function Slider() {
     <>
       <div className="fixed px-10 bg-transparent backdrop-blur-xl w-full lg:hidden h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50">
         <Link href="/">
-          <img
+          <Image
             className="w-10 h-12"
             src="/images/golden-eye.png"
             alt="logo-golden-eye"
+            width={10}
+            height={12}
           />
         </Link>
 

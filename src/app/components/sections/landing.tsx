@@ -7,11 +7,14 @@ import { machina, redhat } from "../exports";
 export default function Landing() {
   return (
     <>
-      <div className="w-11/12 h-screen flex-col lg:flex-row  items-center lg:gap-16 flex ">
-        <div className=" h-full  flex-col justify-center items-center gap-4 flex">
+    {/* the inline css style = {machina.style} would be worked on to follow best practices */}
+      <section className="w-11/12 h-screen flex-col lg:flex-row  items-center  lg:gap-16 flex">
+        <article className=" h-full  flex-col justify-center  gap-4 flex">
+        
           <div
-            className="lg:mr-10 text-center lg:text-left text-2xl md:text-5xl lg:text-5xl 
+            className=" lg:mr-10 text-center lg:text-left text-2xl md:text-5xl lg:text-5xl 
                         md:leading-10 lg:leading-tight font-extrabold  leading-[30px]"
+           
             style={machina.style}
           >
             <span className="text-white ">We </span>
@@ -27,9 +30,9 @@ export default function Landing() {
           >
             {texts.home}
           </div>
-        </div>
-        {/* image for dektop */}
-        <div className="w-full max-w-full  justify-center hidden lg:flex  ">
+        </article>
+        {/* image for desktop */}
+        <div className="w-full max-w-full  justify-center hidden lg:flex ">
           <Image
             src="/images/pile.png"
             alt="image"
@@ -40,7 +43,7 @@ export default function Landing() {
         </div>
 
         {/* image for mobile and tablet */}
-        <div className="w-full max-w-full flex  justify-center lg:hidden  ">
+        <div className="w-full max-w-full flex  justify-center lg:hidden ">
           <Image
             src="/images/hero-image-md.png"
             alt="image"
@@ -49,7 +52,7 @@ export default function Landing() {
             width={650}
           />
         </div>
-      </div>
+      </section>
     </>
   );
 }

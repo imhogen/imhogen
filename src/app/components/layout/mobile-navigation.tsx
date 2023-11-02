@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -25,10 +26,12 @@ function Dropdown() {
                   h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50"
       >
         <Link href="/">
-          <img
+          <Image
             className="w-10 h-12"
             src="/images/golden-eye.png"
             alt="logo-golden-eye"
+            width={10}
+            height={12}
           />
         </Link>
 

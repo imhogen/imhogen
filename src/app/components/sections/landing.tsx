@@ -1,20 +1,18 @@
 import React from "react";
 
 import Image from "next/image";
-import texts from "../../../../contents/texts";
+import texts from "../../../../content/text-content";
 import { machina, redhat } from "../exports";
 
 export default function Landing() {
   return (
     <>
-    {/* the inline css style = {machina.style} would be worked on to follow best practices */}
-      <section className="w-11/12 h-screen flex-col lg:flex-row  items-center  lg:gap-16 flex">
+      {/* the inline css style = {machina.style} would be worked on to follow best practices */}
+      <section className="w-11/12 h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex">
         <article className=" h-full  flex-col justify-center  gap-4 flex">
-        
           <div
-            className=" lg:mr-10 text-center lg:text-left text-2xl md:text-5xl lg:text-5xl 
-                        md:leading-10 lg:leading-tight font-extrabold  leading-[30px]"
-           
+            className=" lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
+                         lg:leading-tight font-extrabold  leading-[30px]"
             style={machina.style}
           >
             <span className="text-white ">We </span>
@@ -24,7 +22,7 @@ export default function Landing() {
             <span className="text-white"> & Processes</span>
           </div>
           <div
-            className=" md:w-5/6  text-center lg:text-left lg:w-full text-stone-300 text-opacity-50
+            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full text-stone-300 text-opacity-50
                              text-base md:text-lg lg:text-xl font-normal  leading-normal"
             style={redhat.style}
           >
@@ -32,22 +30,24 @@ export default function Landing() {
           </div>
         </article>
         {/* image for desktop */}
-        <div className="w-full max-w-full  justify-center hidden lg:flex ">
+        <div className="w-full max-w-full  justify-center  hidden lg:flex ">
           <Image
             src="/images/pile.png"
-            alt="image"
-            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            alt="hero-image"
+            layout="responsive"
+            loading="lazy" // we may eventually use a loading skeleton for this(depends on what is best)
             height={1084}
             width={650}
           />
         </div>
 
         {/* image for mobile and tablet */}
-        <div className="w-full max-w-full flex  justify-center lg:hidden ">
+        <div className="w-full max-w-full flex justify-center items-center lg:hidden ">
           <Image
             src="/images/hero-image-md.png"
-            alt="image"
-            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            alt="hero-image"
+            layout="responsive"
+            loading="lazy"
             height={1084}
             width={650}
           />

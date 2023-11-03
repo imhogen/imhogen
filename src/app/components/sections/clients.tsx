@@ -10,20 +10,26 @@ export default function Clients() {
       className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex"
       style={machina.style}
     >
-      <div className="text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-        <span className="text-white text-2xl ">Some </span>
-        <span className="imho-gradient-text-to-r text-2xl ">Clients</span>
-        <span className="text-white text-2xl "> and </span>
-        <span className="imho-gradient-text-to-b text-2xl ">Partners</span>
+      <div className="text-center sub-heading leading-tight">
+        <span className="text-white  ">Some </span>
+        <span className="imho-gradient-text-to-r  ">Clients</span>
+        <span className="text-white  "> and </span>
+        <span className="imho-gradient-text-to-b  ">Partners</span>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className=" grid grid-cols-2 md:grid-cols-4 gap-24 lg:gap-52">
+        <div className=" grid grid-cols-3 md:grid-cols-6 lg:grid-cols-4 gap-x-10 gap-y-2 lg:gap-y-28 lg:gap-x-52">
           {client.map((item, index) => (
             <div
               key={index}
               className="flex w-24 h-24 lg:w-36 lg:h-24 items-center justify-center"
             >
-              <Image src={item.src} alt={item.alt} width={200} height={200} />
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={200}
+                height={200}
+                className="opacity-80"
+              />
             </div>
           ))}
         </div>

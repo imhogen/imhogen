@@ -1,7 +1,7 @@
 import localFont from "@next/font/local";
-import Navbar from "./layout/desktop-navigation";
-import Dropdown from "./layout/mobile-navigation";
-import Slider from "./layout/tablet-navigation";
+import Navbar from "./navigation/desktop-navigation";
+import Dropdown from "./navigation/mobile-navigation";
+import Slider from "./navigation/tablet-navigation";
 import Landing from "./sections/landing";
 import Value from "./sections/value";
 import Clients from "./sections/clients";
@@ -21,8 +21,10 @@ const exports = {
 export { Dropdown, Landing, Slider, Navbar, Value, Portfolio, Clients };
 
 export const machina = localFont({
-  src: "../../../fonts/NeueMachina-Ultrabold.otf",
+  src: "../../../public/fonts/NeueMachina-Ultrabold.otf",
+  variable: "--font-machina",
 });
 export const redhat = localFont({
-  src: "../../../fonts/RedHatDisplay-VariableFont_wght.ttf",
+  src: "../../../public/fonts/RedHatDisplay-VariableFont_wght.ttf",
+  variable: "--font-redhat",
 });

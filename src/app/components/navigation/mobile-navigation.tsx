@@ -22,16 +22,15 @@ function Dropdown() {
   return (
     <>
       <div
-        className="fixed px-5 bg-transparent backdrop-blur-xl w-full md:hidden 
-                  h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50"
+        className="fixed px-5  w-full md:hidden 
+                  h-20 py-4  justify-between items-center inline-flex top-0 z-50 "
       >
         <Link href="/">
           <Image
-            className="w-10 h-12"
             src="/images/golden-eye.png"
             alt="logo-golden-eye"
-            width={10}
-            height={12}
+            width={40}
+            height={50}
           />
         </Link>
 

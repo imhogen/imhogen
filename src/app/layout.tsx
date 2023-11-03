@@ -1,13 +1,18 @@
+// import { useMediaQuery } from "react-responsive";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "@next/font/local";
-import "./globals.css";
-import { Navbar, Slider, Dropdown } from "./components/exports";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import {
+  Navbar,
+  Slider,
+  Dropdown,
+  redhat,
+  machina,
+} from "./components/exports";
+
 export const metadata: Metadata = {
   title: "IMHO - Innovate Make & Have Ours",
-  description: "Industrial Design Enginnering Company",
+  description: "Engineering Design Company",
 };
 
 export default function RootLayout({
@@ -15,12 +20,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`  ${redhat.variable} `}>
         <Navbar />
-        <Slider />
         <Dropdown />
+        <Slider />
         {children}
         {/* Add footer here */}
       </body>

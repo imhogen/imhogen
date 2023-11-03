@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const links = [
   { text: "Home", href: "/" },
-  { text: "Portfolio", href: "/portfolio" },
-  { text: "Our Process", href: "/process" },
-  { text: "Our Team", href: "/team" },
-  { text: "Blog", href: "/blog" },
+  { text: "Portfolio", href: "#portfolio" },
+  { text: "Our Process", href: "#value" },
+  { text: "Our Team", href: "#team" },
+  { text: "Blog", href: "#blog" },
 ];
 
 function Slider() {
@@ -26,22 +26,27 @@ function Slider() {
 
   return (
     <>
-      <div className="fixed px-10 bg-transparent backdrop-blur-xl w-full lg:hidden h-20 py-4 rounded-lg justify-between items-center inline-flex top-0 z-50">
+      <div
+        className="px-10 bg-transparent hidden md:fixed backdrop-blur-xl 
+                    w-full lg:hidden h-20 py-4 rounded-lg justify-between items-center
+                     md:inline-flex top-0 z-50"
+      >
         <Link href="/">
           <Image
-            className="w-10 h-12"
             src="/images/golden-eye.png"
             alt="logo-golden-eye"
-            width={10}
-            height={12}
+            width={50}
+            height={60}
           />
         </Link>
 
         <div>
           <div
-            className=" flex flex-row h-10 px-4 py-2 bg-transparent rounded-lg border border-1
+            className={`flex flex-row h-10 px-4 py-2 bg-transparent rounded-lg ${
+              isOpen && "border border-1"
+            }
                        border-gray-300 border-opacity-100 backdrop-blur-2xl 
-                       justify-start items-center gap-3 "
+                       justify-start items-center gap-3 `}
           >
             {isOpen && (
               <motion.span

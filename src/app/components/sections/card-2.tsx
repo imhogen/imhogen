@@ -1,7 +1,8 @@
 import React from "react";
-import { portfolio } from "../../../../contents/mapped";
+
 import Image from "next/image";
 import { machina, redhat } from "../exports";
+import { portfolio } from "../../../../content/mapped-content";
 
 export default function Card() {
   return (

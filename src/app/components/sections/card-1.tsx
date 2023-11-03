@@ -1,8 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-import { value } from "../../../../contents/mapped";
+
 import { machina, redhat } from "../exports";
+import { value } from "../../../../content/mapped-content";
 
 export default function Card() {
   const ref = useRef<HTMLDivElement>(null);

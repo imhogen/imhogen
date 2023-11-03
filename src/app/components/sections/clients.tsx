@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import { client } from "../../../../contents/mapped";
 import { machina } from "../exports";
+import { client } from "../../../../content/mapped-content";
 
 export default function Clients() {
   return (
@@ -23,7 +23,7 @@ export default function Clients() {
               key={index}
               className="flex w-24 h-24 lg:w-36 lg:h-24 items-center justify-center"
             >
-              <Image src={item.src} alt={item.alt}width={200} height={200} />
+              <Image src={item.src} alt={item.alt} width={200} height={200} />
             </div>
           ))}
         </div>

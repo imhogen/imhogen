@@ -32,6 +32,10 @@ body {
   @apply text-transparent bg-clip-text bg-gradient-to-b from-[#EF7D00] to-amber-200;
 }
 
+.sub-heading {
+  @apply text-xl md:text-2xl lg:text-3xl;
+}
+
 .not-found {
   background: url(../../public/images/imho-pattern.png);
   color: white;

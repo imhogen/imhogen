@@ -7,6 +7,7 @@ export default function Value() {
     <div
       className="w-full mt-10 lg:mt-20 text-center gap-10 lg:gap-20"
       style={machina.style}
+      id="value"
     >
       <div className="text-2xl md:text-3xl lg:text-4xl font-bold  leading-tight">
         <span className="text-white ">Our Unique </span>
@@ -14,7 +15,7 @@ export default function Value() {
         <span className="text-white "> and Where We </span>
         <span className="imho-gradient-text-to-b  ">Excel</span>
       </div>
-      {/* cards  */}
+      {/* our value and where we excel  cards  */}
 
       <Card />
     </div>

@@ -8,8 +8,8 @@ export default function Landing() {
   return (
     <>
       {/* the inline css style = {machina.style} would be worked on to follow best practices */}
-      <section className="w-11/12 h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex">
-        <article className=" h-full  flex-col justify-center  gap-4 flex">
+      <section className="w-full h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex">
+        <article className="   flex-col justify-center  gap-4 flex">
           <div
             className=" lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
                          lg:leading-tight font-extrabold  leading-[30px]"

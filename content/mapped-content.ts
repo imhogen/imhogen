@@ -1,4 +1,4 @@
-import { PortfolioProps, clientsProps, valueProps } from "../Types";
+import { PortfolioProps, clientsProps, valueProps, HelpProps } from "../Types";
 
 export const value: valueProps[] = [
   {
@@ -84,5 +84,32 @@ export const portfolio: PortfolioProps[] = [
       " IMHO has helped deliver the design of simple pyrolysis system for charing, plastic to fuel conversion and other circular technologies. We have been a great partner for commeph and associate, helping deliver various forms of green and and sustainable technolgies.",
     Src: "/images/portfolio_4.png",
     alt: "image",
+  },
+];
+
+export const help: HelpProps[] = [
+  {
+    customIcon: "/images/Artboard2.svg",
+    title: "Product Design and Development",
+    descriptiveText:
+      "Transform your vision into reality with our product design and development expertise. From concept to prototype, our engineering team specializes in crafting innovative, market-ready solutions. We thrive on challenges and excel in turning ideas into tangible products. Whether you're a startup or an established company, we're your dedicated partners in the journey from design to delivery. Let's collaborate to create cutting-edge products that stand out in today's competitive market. Your success is our priority, and we're here to make it happen.",
+  },
+  {
+    customIcon: "/images/Artboard3.svg",
+    title: "Engineering Design Capacity Building",
+    descriptiveText:
+      "At our core, we're not just designers; we're educators and enablers. Our passion lies in engineering design capacity building. We offer tailored programs to empower your team with the skills and knowledge needed to excel in this ever-evolving field. Whether it's honing existing expertise or introducing novices to the art of design, our training programs are meticulously crafted to elevate your capabilities. Let us be your partners in skill development and innovation, and together, we'll drive excellence in engineering design. Explore how we can help your team thrive and flourish.",
+  },
+  {
+    customIcon: "/images/Artboard5.svg",
+    title: "Process Design and Development",
+    descriptiveText:
+      "At the heart of innovation lies effective process design and development. We specialize in transforming ideas into efficient, functional, and sustainable processes. With our expertise, we'll guide your project from concept to reality, ensuring optimal performance and cost-efficiency. Whether you're launching a new product, improving an existing process, or pursuing sustainable solutions, our team is here to collaborate and drive success. Let's harness the power of engineering design to shape a brighter future for your enterprise.",
+  },
+  {
+    customIcon: "/images/Artboard6.svg",
+    title: "Design Documentation",
+    descriptiveText:
+      "Navigating the intricate landscape of design documentation can be challenging. At IMHO, we specialize in simplifying this process for you. Our expert team ensures your project is meticulously documented, providing you with a comprehensive record of every design detail. From CAD drawings to technical specifications, we've got you covered. With our support, your design documentation will be seamless, accurate, and ready to propel your project to success. Let us be your partner in achieving excellence through precise design documentation.",
   },
 ];

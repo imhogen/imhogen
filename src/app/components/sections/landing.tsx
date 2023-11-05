@@ -22,8 +22,7 @@ export default function Landing() {
             <span className="text-white"> & Processes</span>
           </div>
           <div
-            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full text-stone-300 text-opacity-50
-                             text-base md:text-lg lg:text-xl font-normal  leading-normal"
+            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home"
             style={redhat.style}
           >
             {texts.home}

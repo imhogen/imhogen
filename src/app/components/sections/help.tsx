@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./card-3";
+import Card from "../cards/card-3";
 import { machina } from "../exports";
 
 export default function Help() {

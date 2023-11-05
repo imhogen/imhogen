@@ -28,3 +28,10 @@ export interface HelpProps {
   title: string;
   descriptiveText: string;
 }
+
+export interface teamProps {
+  title: string;
+  description: string;
+  Src: string;
+  alt: string;
+}

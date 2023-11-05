@@ -1,4 +1,10 @@
-import { PortfolioProps, clientsProps, valueProps, HelpProps } from "../Types";
+import {
+  PortfolioProps,
+  clientsProps,
+  valueProps,
+  HelpProps,
+  teamProps,
+} from "../Types";
 
 export const value: valueProps[] = [
   {
@@ -111,5 +117,23 @@ export const help: HelpProps[] = [
     title: "Design Documentation",
     descriptiveText:
       "Navigating the intricate landscape of design documentation can be challenging. At IMHO, we specialize in simplifying this process for you. Our expert team ensures your project is meticulously documented, providing you with a comprehensive record of every design detail. From CAD drawings to technical specifications, we've got you covered. With our support, your design documentation will be seamless, accurate, and ready to propel your project to success. Let us be your partner in achieving excellence through precise design documentation.",
+  },
+];
+
+export const team: teamProps[] = [
+  {
+    title: "Work with our dedicated team",
+    description:
+      "At IMHO, we boast a dynamic and dedicated team with diverse expertise in engineering and industrial design. We're more than just designers; we're problem solvers. Collaborating closely with our clients, we ensure a comprehensive understanding of their needs and deliver optimal value. Our client-centric approach involves engagement at every design stage, ensuring tailored, high-quality solutions are rapidly developed with cost-effectiveness in mind. When you work with our team, you're investing your money wisely, receiving the best value. Integrity is paramount to us; we prioritize confidentiality, safeguarding our clients' information and ideas with utmost integrity. Your trust is our foundation.",
+    Src: "/images/our-team-2.png",
+    alt: "image",
+  },
+
+  {
+    title: " Vision",
+    description:
+      " Our vision is to Empower a sustainable and survivable future. By innovating transformational techologies and upskilling the next generation of innovators.",
+    Src: "/images/our-team-1.png",
+    alt: "image",
   },
 ];

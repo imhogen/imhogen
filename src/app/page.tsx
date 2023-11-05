@@ -1,4 +1,11 @@
-import { Landing, Portfolio, Value, Clients, Help } from "./components/exports";
+import {
+  Landing,
+  Portfolio,
+  Value,
+  Clients,
+  Help,
+  Team,
+} from "./components/exports";
 import Process from "./components/sections/imho-process";
 import { Shell } from "./components/ui/shell";
 export default function Home() {
@@ -15,6 +22,7 @@ export default function Home() {
         <Portfolio />
         <Help />
         <Process />
+        <Team />
       </Shell>
     </main>
   );

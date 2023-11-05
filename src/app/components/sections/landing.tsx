@@ -46,7 +46,7 @@ export default function Landing() {
             src="/images/hero-image-md.png"
             alt="hero-image"
             layout="responsive"
-            loading="lazy"
+            priority
             height={1084}
             width={650}
           />

@@ -34,7 +34,7 @@ export default function Landing() {
             src="/images/pile.png"
             alt="hero-image"
             layout="responsive"
-            loading="lazy" // we may eventually use a loading skeleton for this(depends on what is best)
+            priority // we may eventually use a loading skeleton for this(depends on what is best)
             height={1084}
             width={650}
           />

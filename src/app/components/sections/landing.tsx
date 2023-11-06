@@ -22,8 +22,7 @@ export default function Landing() {
             <span className="text-white"> & Processes</span>
           </div>
           <div
-            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full text-stone-300 text-opacity-50
-                             text-base md:text-lg lg:text-xl font-normal  leading-normal"
+            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home"
             style={redhat.style}
           >
             {texts.home}
@@ -35,7 +34,7 @@ export default function Landing() {
             src="/images/pile.webp"
             alt="hero-image"
             layout="responsive"
-            loading="lazy" // we may eventually use a loading skeleton for this(depends on what is best)
+            priority // we may eventually use a loading skeleton for this(depends on what is best)
             height={1084}
             width={650}
           />
@@ -47,7 +46,7 @@ export default function Landing() {
             src="/images/hero-image-md.webp"
             alt="hero-image"
             layout="responsive"
-            loading="lazy"
+            priority
             height={1084}
             width={650}
           />

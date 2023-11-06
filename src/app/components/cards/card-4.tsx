@@ -2,35 +2,29 @@ import React from "react";
 
 import Image from "next/image";
 import { machina, redhat } from "../exports";
-import { portfolio } from "../../../../content/mapped-content";
+import { team } from "../../../../content/mapped-content";
 
 export default function Card() {
   return (
     <>
-      {portfolio.map((item, index) => (
+      {team.map((item, index) => (
         <div
-          className={`w-10/12 h-fit text-white justify-between flex flex-col items-center mx-auto py-10${
+          className={`w-full h-fit justify-around flex flex-col items-center mx-auto py-10${
             index % 2 === 0 ? " lg:flex-row" : " lg:flex-row-reverse"
           }`}
           key={index}
         >
           {/* text */}
-          <div className="flex flex-col w-11/12 lg:w-1/2 text-center lg:text-left gap-5">
-            <span
-              className="text-lg md:text-2xl lg:text-3xl "
-              style={machina.style}
-            >
-              {item.count}
-            </span>
-            <span
-              className="text-lg md:text-2xl lg:text-4xl"
-              style={machina.style}
+          <div className="flex flex-col w-11/12 lg:w-2/5  text-left gap-5">
+            <h1
+              className="text-lg  font-bold lg:text-xl text-white opacity-80 "
+              style={redhat.style}
             >
               {item.title}
-            </span>
-            <span className="text-sm md:text-base" style={redhat.style}>
+            </h1>
+            <p className="descriptive-text-portfolio " style={redhat.style}>
               {item.description}
-            </span>
+            </p>
           </div>
           {/* image */}
           <div className="flex justify-center items-center h-96 mt-10 md:mt-20 md:w-full lg:w-fit ">

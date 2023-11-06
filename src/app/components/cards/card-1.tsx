@@ -7,20 +7,20 @@ export default function Card() {
       {value.map((item, index) => (
         <div
           key={index}
-          className="w-full lg:w-11/12  h-full px-2  py-10 lg:px-10 mx-auto  bg-gray-200 rounded-2xl flex-col  items-center  inline-flex"
+          className=" background-white-card w-11/12  h-full  flex-col  items-center  inline-flex"
         >
           <div className="w-36 relative">
             <img src={item.src} width={200} height={200} alt="icon" />
           </div>
           <div className="flex flex-col gap-5">
             <h1
-              className=" text-gray-900 text-lg font-extrabold text-center lg:text-left leading-7"
+              className="title-white-card text-center lg:text-left "
               style={machina.style}
             >
               {item.title}
             </h1>
             <p
-              className="  text-black text-opacity-70 text-base font-normal leading-normal text-center lg:text-left "
+              className="  descriptive-text-white-card text-center lg:text-left "
               style={redhat.style}
             >
               {item.description}

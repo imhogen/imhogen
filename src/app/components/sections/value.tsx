@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./card-1";
+import Card from "../cards/card-1";
 import { machina } from "../exports";
 
 export default function Value() {

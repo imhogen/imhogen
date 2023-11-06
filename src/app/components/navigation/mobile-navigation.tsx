@@ -27,7 +27,7 @@ function Dropdown() {
       >
         <Link href="/">
           <Image
-            src="/images/golden-eye.png"
+            src="/images/golden-eye.webp"
             alt="logo-golden-eye"
             width={40}
             height={50}

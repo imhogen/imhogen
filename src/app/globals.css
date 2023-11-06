@@ -59,7 +59,7 @@ body {
   @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-100 rounded-2xl;
 }
 .not-found {
-  background: url(../../public/images/imho-pattern.png);
+  background: url(../../public/images/imho-pattern.webp);
   color: white;
 
   background-clip: text;

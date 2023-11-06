@@ -33,7 +33,7 @@ function Slider() {
       >
         <Link href="/">
           <Image
-            src="/images/golden-eye.png"
+            src="/images/golden-eye.webp"
             alt="logo-golden-eye"
             width={50}
             height={60}

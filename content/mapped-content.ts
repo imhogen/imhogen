@@ -23,36 +23,36 @@ export const value: valueProps[] = [
 
 export const client: clientsProps[] = [
   {
-    src: "/images/ic.png",
+    src: "/images/ic.webp",
     alt: "ic logo",
   },
   {
-    src: "/images/KBI.png",
+    src: "/images/KBI.webp",
     alt: "kbi logo",
   },
   {
-    src: "/images/COE.png",
+    src: "/images/COE.webp",
     alt: "coe logo",
   },
   {
-    src: "/images/SMIDO.png",
+    src: "/images/SMIDO.webp",
     alt: "smido logo",
   },
   {
-    src: "/images/tcc_knust.png",
+    src: "/images/tcc_knust.webp",
     alt: "tcc logo",
   },
   {
-    src: "/images/Commeph.png",
+    src: "/images/Commeph.webp",
     alt: "commaph logo",
   },
   {
-    src: "/images/abu_diyah.png",
+    src: "/images/abu_diyah.webp",
     alt: "abu diya logo",
   },
 
   {
-    src: "/images/TF_AFRICA.png",
+    src: "/images/TF_AFRICA.webp",
     alt: "tf Africa logo",
   },
 ];
@@ -63,7 +63,7 @@ export const portfolio: PortfolioProps[] = [
     title: "Engineering Design Workshop",
     description:
       "In collaboration with the esteemed Prof. George Obeng, Dean of the Faculty of Mechanical and Chemical Engineering, we hosted an enlightening workshop. Many students tend to sidestep engineering design, deeming it daunting. Our workshop aimed to change this perception by highlighting the incredible value of engineering design in career growth and national development. We showcased that, with the right tools and techniques, engineering design becomes approachable and gratifying. This event not only raised awareness about the field but also rekindled student enthusiasm.We're committed to nurturing the future of engineering design.",
-    Src: "/images/porfolio_1.png",
+    Src: "/images/portfolio_1.webp",
     alt: "image",
   },
 
@@ -72,7 +72,7 @@ export const portfolio: PortfolioProps[] = [
     title: "  Disc Brake Casting Process",
     description:
       " The Foundry Men Association led by Abu-Diyau sought a partner to expand their product lines and drive research and development, all within budget constraints and technological boundaries. Seizing the vision to bolster Ghana's automotive sector, an opportunity arose to become Original Equipment Manufacturers (OEMs). Our team existing capabilities and expertise. This endeavor birthed a new product line, propelling the foundry towards a promising future and a thriving market presence.",
-    Src: "/images/portfolio_2.png",
+    Src: "/images/portfolio_2.webp",
     alt: "image",
   },
   {
@@ -80,7 +80,7 @@ export const portfolio: PortfolioProps[] = [
     title: "Laboratory High Shear MixerEngineering Design Workshop",
     description:
       " In partnership with TCC-CIMET, IMHO proudly presents the Laboratory High Shear Mixer, a tailor-made solution for the Transport Research and Education Centre (TRECK) at KNUST. This cutting-edge equipment is instrumental for blending diverse materials and formulating composite substances essential for civil laboratory experiments and research. The seamless integration of this solution promises to significantly enhance the progress of ongoing research endeavors",
-    Src: "/images/portfolio_3.png",
+    Src: "/images/portfolio_3.webp",
     alt: "image",
   },
   {
@@ -88,7 +88,7 @@ export const portfolio: PortfolioProps[] = [
     title: "  Simple pyrolysis",
     description:
       " IMHO has helped deliver the design of simple pyrolysis system for charing, plastic to fuel conversion and other circular technologies. We have been a great partner for commeph and associate, helping deliver various forms of green and and sustainable technolgies.",
-    Src: "/images/portfolio_4.png",
+    Src: "/images/portfolio_4.webp",
     alt: "image",
   },
 ];

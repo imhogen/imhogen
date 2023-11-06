@@ -16,7 +16,7 @@ function Navbar() {
       <div className="hidden fixed  mt-5 lg:inline-flex  w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
         <Link href="/">
           <Image
-            src="/images/golden-eye.png"
+            src="/images/golden-eye.webp"
             alt="logo-golden-eye"
             width={60}
             height={70}

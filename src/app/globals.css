@@ -37,7 +37,7 @@ body {
 }
 
 .not-found {
-  background: url(../../public/images/imho-pattern.png);
+  background: url(../../public/images/imho-pattern.webp);
   color: white;
 
   background-clip: text;

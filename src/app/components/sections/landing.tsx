@@ -32,7 +32,7 @@ export default function Landing() {
         {/* image for desktop */}
         <div className="w-full max-w-full  justify-center  hidden lg:flex ">
           <Image
-            src="/images/pile.png"
+            src="/images/pile.webp"
             alt="hero-image"
             layout="responsive"
             loading="lazy" // we may eventually use a loading skeleton for this(depends on what is best)
@@ -44,7 +44,7 @@ export default function Landing() {
         {/* image for mobile and tablet */}
         <div className="w-full max-w-full flex justify-center items-center lg:hidden ">
           <Image
-            src="/images/hero-image-md.png"
+            src="/images/hero-image-md.webp"
             alt="hero-image"
             layout="responsive"
             loading="lazy"

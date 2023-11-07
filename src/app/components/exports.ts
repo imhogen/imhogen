@@ -6,7 +6,7 @@ import Landing from "./sections/landing";
 import Value from "./sections/value";
 import Clients from "./sections/clients";
 import Portfolio from "./sections/portfolio";
-import DesktopFooter from "./footer/DesktopFooter";
+
 import Help from "./sections/help";
 import Team from "./sections/our-team";
 
@@ -19,7 +19,7 @@ const exports = {
   Clients,
   Help,
   Team,
-  DesktopFooter,
+
   Portfolio,
 };
 
@@ -31,7 +31,6 @@ export {
   Value,
   Portfolio,
   Clients,
-  DesktopFooter,
   Help,
   Team,
 };

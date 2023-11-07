@@ -59,12 +59,14 @@ body {
   @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-100 rounded-2xl;
 }
 .not-found {
+  /* Other styles... */
   background: url(../../public/images/imho-pattern.webp);
   color: white;
-
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   line-height: 1;
+
+  /* Set the background size to a smaller value */
+  background-size: 50%; /* Adjust this value to your desired size */
 }

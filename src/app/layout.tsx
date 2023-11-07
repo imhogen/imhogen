@@ -9,6 +9,11 @@ import {
   redhat,
   machina,
 } from "./components/exports";
+import Footer from "./components/footer/footer";
+interface RootLayoutProps {
+  children: React.ReactNode;
+  hideNavAndFooter?: boolean;
+}
 
 export const metadata: Metadata = {
   title: "IMHO - Innovate Make & Have Ours",
@@ -17,19 +22,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
-  // const isMobile = useMediaQuery({ maxWidth: 767 });
-
+  hideNavAndFooter = false,
+}: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`  ${redhat.variable} `}>
-        <Navbar />
-        <Dropdown />
-        <Slider />
+      <body className={` ${redhat.variable} `}>
+        {!hideNavAndFooter && <Navbar />}
+        {!hideNavAndFooter && <Dropdown />}
+        {!hideNavAndFooter && <Slider />}
+
         {children}
-        {/* Add footer here */}
+        {!hideNavAndFooter && <Footer />}
       </body>
     </html>
   );

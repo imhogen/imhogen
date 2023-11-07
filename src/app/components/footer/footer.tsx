@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { machina, redhat } from "../exports";
+import { machina, redhat, calligraffitti } from "../exports";
 const Footer = () => {
   return (
     <footer
@@ -42,7 +42,7 @@ const Footer = () => {
             >
               Innovate Make and Have Ours LTD.
             </p>
-            <p className="imho-gradient-text-to-r text-xs" style={redhat.style}>
+            <p className="text-white text-xs" style={calligraffitti.style}>
               Make it real
             </p>
           </span>
@@ -88,13 +88,13 @@ const Footer = () => {
               />
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Last Name"
                 className="w-3/4 bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm"
               />
             </div>
             <input
-              type="text"
-              placeholder="First Name"
+              type="email"
+              placeholder="Email"
               className="w-full bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm"
             />
             <div className="rounded-lg border-gray-100 border border-opacity-30 my-2 flex flex-col grow">
@@ -131,7 +131,7 @@ const Footer = () => {
 
       <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20"></div>
       <div className="w-full flex flex-col justify-between items-center gap-3">
-        <div className="text-white text-opacity-70 text-sm font-normal leading-[21px]">
+        <div className="text-white text-opacity-70 text-sm leading-[21px]">
           &copy; 2023 IMHO. All rights reserved.
         </div>
         <div className="justify-start items-center gap-5 flex">

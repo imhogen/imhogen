@@ -16,7 +16,7 @@ export default function Process() {
           <span className="text-white font-extrabold leading-10"> Process</span>
         </div>
         <div className="w-full max-w-4/5">
-          <div className="relative w-full " style={{ paddingTop: "130%" }}>
+          <div className="w-full relative" style={{ paddingTop: "130%" }}>
             <Image
               src="/images/imho_process.webp"
               alt="imhos process"

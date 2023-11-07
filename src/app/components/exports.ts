@@ -6,6 +6,7 @@ import Landing from "./sections/landing";
 import Value from "./sections/value";
 import Clients from "./sections/clients";
 import Portfolio from "./sections/portfolio";
+import DesktopFooter from "./footer/DesktopFooter";
 
 const exports = {
   Dropdown,
@@ -18,7 +19,16 @@ const exports = {
   Portfolio,
 };
 
-export { Dropdown, Landing, Slider, Navbar, Value, Portfolio, Clients };
+export {
+  Dropdown,
+  Landing,
+  Slider,
+  Navbar,
+  Value,
+  Portfolio,
+  Clients,
+  DesktopFooter,
+};
 
 export const machina = localFont({
   src: "../../../public/fonts/NeueMachina-Ultrabold.otf",

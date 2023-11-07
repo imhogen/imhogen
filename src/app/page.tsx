@@ -1,4 +1,10 @@
-import { Landing, Portfolio, Value, Clients } from "./components/exports";
+import {
+  Landing,
+  Portfolio,
+  Value,
+  Clients,
+  DesktopFooter,
+} from "./components/exports";
 import { Shell } from "./components/ui/shell";
 export default function Home() {
   return (
@@ -16,6 +22,9 @@ export default function Home() {
       {/* portfolio */}
       <Shell className="">
         <Portfolio />
+      </Shell>
+      <Shell className="w-full ">
+        <DesktopFooter />
       </Shell>
     </main>
   );

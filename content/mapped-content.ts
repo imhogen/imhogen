@@ -125,7 +125,7 @@ export const team: teamProps[] = [
     title: "Work with our dedicated team",
     description:
       "At IMHO, we boast a dynamic and dedicated team with diverse expertise in engineering and industrial design. We're more than just designers; we're problem solvers. Collaborating closely with our clients, we ensure a comprehensive understanding of their needs and deliver optimal value. Our client-centric approach involves engagement at every design stage, ensuring tailored, high-quality solutions are rapidly developed with cost-effectiveness in mind. When you work with our team, you're investing your money wisely, receiving the best value. Integrity is paramount to us; we prioritize confidentiality, safeguarding our clients' information and ideas with utmost integrity. Your trust is our foundation.",
-    Src: "/images/our-team-2.png",
+    Src: "/images/our-team-2.webp",
     alt: "image",
   },
 
@@ -133,7 +133,7 @@ export const team: teamProps[] = [
     title: " Vision",
     description:
       " Our vision is to Empower a sustainable and survivable future. By innovating transformational techologies and upskilling the next generation of innovators.",
-    Src: "/images/our-team-1.png",
+    Src: "/images/our-team-1.webp",
     alt: "image",
   },
 ];

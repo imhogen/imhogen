@@ -11,6 +11,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 90 90'%3E%3Ccircle fill-opacity='0.08' fill='%23FFFFFF' cx='45' cy='45' r='5'/%3E%3Cg fill='%23000000' fill-opacity='0.08'%3E%3Ccircle cx='0' cy='90' r='5'/%3E%3Ccircle cx='90' cy='90' r='5'/%3E%3Ccircle cx='90' cy='0' r='5'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+/* styles for tablet navigation bar */
 .show-navigation span {
   max-width: 0;
   -webkit-transition: max-width 1s;
@@ -24,6 +25,7 @@ body {
   max-width: 24rem;
 }
 
+/* glabal styles for gradient color texts */
 .imho-gradient-text-to-r {
   @apply text-transparent bg-clip-text bg-gradient-to-r from-[#EF7D00] to-amber-200;
 }
@@ -33,9 +35,29 @@ body {
 }
 
 .sub-heading {
-  @apply text-xl md:text-2xl lg:text-3xl;
+  @apply text-xl md:text-4xl lg:text-5xl;
 }
 
+.descriptive-text-home {
+  @apply text-opacity-50 text-stone-300  md:text-lg lg:text-xl font-normal  leading-normal;
+}
+
+.descriptive-text-portfolio {
+  @apply text-base md:text-lg  opacity-50 text-stone-300;
+}
+
+/* global styles for white cards */
+.title-white-card {
+  @apply text-gray-900 text-lg font-extrabold leading-7;
+}
+
+.desctiptive-text-white-card {
+  @apply text-black text-opacity-70 text-base font-normal leading-normal;
+}
+
+.background-white-card {
+  @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-100 rounded-2xl;
+}
 .not-found {
   background: url(../../public/images/imho-pattern.webp);
   color: white;
@@ -45,9 +67,4 @@ body {
   -webkit-text-fill-color: transparent;
 
   line-height: 1;
-}
-
-.text-stroke-2 {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
 }

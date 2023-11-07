@@ -22,3 +22,16 @@ export interface ButtonProps
   text: string;
   className?: string;
 }
+
+export interface HelpProps {
+  customIcon: string;
+  title: string;
+  descriptiveText: string;
+}
+
+export interface teamProps {
+  title: string;
+  description: string;
+  Src: string;
+  alt: string;
+}

@@ -7,6 +7,8 @@ import Value from "./sections/value";
 import Clients from "./sections/clients";
 import Portfolio from "./sections/portfolio";
 import DesktopFooter from "./footer/DesktopFooter";
+import Help from "./sections/help";
+import Team from "./sections/our-team";
 
 const exports = {
   Dropdown,
@@ -15,7 +17,9 @@ const exports = {
   Navbar,
   Value,
   Clients,
-
+  Help,
+  Team,
+  DesktopFooter,
   Portfolio,
 };
 
@@ -28,6 +32,8 @@ export {
   Portfolio,
   Clients,
   DesktopFooter,
+  Help,
+  Team,
 };
 
 export const machina = localFont({

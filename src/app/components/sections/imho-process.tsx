@@ -15,7 +15,7 @@ export default function Process() {
         <div className="w-full max-w-4/5">
           <div className="relative w-full " style={{ paddingTop: "130%" }}>
             <Image
-              src="/images/imho_process.png"
+              src="/images/imho_process.webp"
               alt="imhos process"
               layout="fill"
               objectFit="contain"

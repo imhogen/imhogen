@@ -19,7 +19,6 @@ const exports = {
   Clients,
   Help,
   Team,
-
   Portfolio,
 };
 
@@ -42,4 +41,9 @@ export const machina = localFont({
 export const redhat = localFont({
   src: "../../../public/fonts/RedHatDisplay-VariableFont_wght.ttf",
   variable: "--font-redhat",
+});
+
+export const calligraffitti = localFont({
+  src: "../../../public/fonts/Calligraffitti-Regular.ttf",
+  variable: "--font-calligraffitti",
 });

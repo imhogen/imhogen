@@ -5,7 +5,6 @@ import {
   Clients,
   Help,
   Team,
-  DesktopFooter,
 } from "./components/exports";
 import Process from "./components/sections/imho-process";
 import { Shell } from "./components/ui/shell";
@@ -24,9 +23,6 @@ export default function Home() {
         <Help />
         <Process />
         <Team />
-      </Shell>
-      <Shell className="w-full ">
-        <DesktopFooter />
       </Shell>
     </main>
   );

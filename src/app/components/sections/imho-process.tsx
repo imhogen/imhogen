@@ -5,7 +5,10 @@ import { machina } from "../exports";
 export default function Process() {
   return (
     <div>
-      <div className="w-full h-screen flex flex-col justify-start items-center gap-10">
+      <div
+        className="w-full h-screen flex flex-col justify-start items-center gap-10"
+        id="process"
+      >
         <div className="text-center sub-heading" style={machina.style}>
           <span className="imho-gradient-text-to-r font-extrabold leading-10">
             IMHO’s

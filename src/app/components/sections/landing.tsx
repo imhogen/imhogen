@@ -9,7 +9,7 @@ export default function Landing() {
     <>
       {/* the inline css style = {machina.style} would be worked on to follow best practices */}
       <section
-        className="w-full h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex"
+        className="w-full h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex "
         id="/"
       >
         <article className="   flex-col justify-center  gap-4 flex">
@@ -18,7 +18,7 @@ export default function Landing() {
                          lg:leading-tight font-extrabold  leading-[30px]"
             style={machina.style}
           >
-            <span className="text-white ">We</span>
+            <span className="text-white ">We</span>{" "}
             <span className="imho-gradient-text-to-b">Design</span>
             <span className="text-white "> Highly Functional and Robust </span>
             <span className="imho-gradient-text-to-r ">Products</span>

@@ -5,14 +5,14 @@ import { machina } from "../exports";
 export default function Portfolio() {
   return (
     <div
-      className="  w-full h-fit flex-col  justify-center items-center gap-10 flex"
+      className="  w-full h-fit flex-col  justify-center items-center gap-10 flex pt-20"
       id="portfolio"
     >
       <section
-        className="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+        className="text-white text-center sub-heading font-bold leading-tight"
         style={machina.style}
       >
-        Some Portfolio
+        Some <span className="imho-gradient-text-to-b">Portfolio</span>
       </section>
 
       <section className="">

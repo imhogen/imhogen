@@ -4,13 +4,13 @@ import { machina, redhat, calligraffitti } from "../exports";
 const Footer = () => {
   return (
     <footer
-      className="mx-6 my-3 w-11/12 h-fit p-3 md:p-7 rounded-xl 
+      className="mx-6 mt-20 mb-10 w-11/12 h-fit p-3 md:p-7 rounded-xl 
                      gap-10 md:gap-2 flex-col justify-start items-center
                      inline-flex   border border-1
                      border-gray-200 border-opacity-20"
     >
       {/* medium and large screens only */}
-      <div className="md:flex justify-between w-full items-center hidden">
+      <div className=" md:flex justify-between w-full items-center hidden">
         <div className="text-white text-sm">
           KBI KNUST, Commercial Area
           <br />
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
       <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20 hidden md:block"></div>
       <section className="flex flex-col  md:flex-row w-full gap-5 ">
-        <div className="w-full flex justify-around md:flex-col md:justify-center md:w-2/5 lg:w-1/5 gap-10 md:gap-0">
+        <div className="w-4/5 flex gap-10 justify-start md:flex-col md:justify-center md:w-2/5 lg:w-1/5 md:gap-0">
           <Link href="/">
             <Image
               src="/images/golden-eye.webp"
@@ -34,18 +34,22 @@ const Footer = () => {
               height={70}
             />
           </Link>
-
-          <span>
-            <p
-              className="text-white text-md md:text-2xl leading-5"
-              style={machina.style}
-            >
-              Innovate Make and Have Ours LTD.
-            </p>
-            <p className="text-white text-xs" style={calligraffitti.style}>
-              Make it real
-            </p>
-          </span>
+          <div>
+            <span>
+              <p
+                className="text-white text-md md:text-2xl leading-5 "
+                style={machina.style}
+              >
+                Innovate Make and Have Ours LTD.
+              </p>
+              <p
+                className="text-white text-xs  pt-2"
+                style={calligraffitti.style}
+              >
+                Make it real
+              </p>
+            </span>
+          </div>
         </div>
 
         {/*  */}
@@ -77,7 +81,7 @@ const Footer = () => {
           style={redhat.style}
         >
           {/* contact form */}
-          <form className="text-white flex flex-col">
+          <form className="w-full md:w-4/5 lg:w-2/5 text-white flex flex-col mx-auto md:mx-0">
             <h1 className="text-white">Send us a message</h1>
 
             <div className="w-full flex gap-2 py-2">

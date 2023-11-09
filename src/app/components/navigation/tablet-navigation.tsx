@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const links = [
@@ -27,9 +27,9 @@ function Slider() {
   return (
     <>
       <div
-        className="px-10 bg-transparent hidden md:fixed backdrop-blur-xl 
-                    w-full lg:hidden h-20 py-4 rounded-lg justify-between items-center
-                     md:inline-flex top-0 z-50"
+        className="px-10 bg-transparent hidden md:fixed 
+                    w-full lg:hidden h-20 py-4 rounded-lg justify-between items-center align-middle
+                    md:inline-flex top-0 z-50"
       >
         <Link href="/">
           <Image
@@ -42,62 +42,66 @@ function Slider() {
 
         <div>
           <div
-            className={`flex flex-row h-10 px-4 py-2 bg-transparent rounded-lg ${
-              isOpen && "border border-1"
+            className={`flex flex-row h-10 px-3 py-5 bg-transparent rounded-lg ${
+              isOpen && "border border-1 border-opacity-20"
             }
-                       border-gray-300 border-opacity-100 backdrop-blur-2xl 
-                       justify-start items-center gap-3 `}
+                       border-gray-300 border-opacity-100 div-with-bg-and-blur
+                       justify-start items-center gap-3`}
           >
-            {isOpen && (
-              <motion.span
-                initial={{ maxWidth: 0 }}
-                animate={{ maxWidth: "42rem" }}
-                transition={{ duration: 0.5 }}
-                className="flex flex-row h-10 py-1 gap-8"
-              >
-                {links.map((link, index) => (
-                  <Link key={index} href={link.href} passHref>
-                    <p
-                      className="text-white text-opacity-60 text-sm font-light leading-normal transition duration-2000 ease"
-                      onClick={handleLinkClick}
+            <AnimatePresence mode="wait">
+              {isOpen ? (
+                <motion.span
+                  initial={{ maxWidth: 0 }}
+                  animate={{ maxWidth: isOpen ? "42rem" : "0rem" }}
+                  exit={{ maxWidth: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-row h-10 py-1 gap-8 items-center"
+                >
+                  {links.map((link, index) => (
+                    <Link key={index} href={link.href} passHref>
+                      <p
+                        className="text-white text-opacity-60 text-sm font-light leading-normal transition duration-2000 ease align-middle"
+                        onClick={handleLinkClick}
+                      >
+                        {link.text}
+                      </p>
+                    </Link>
+                  ))}
+                  <div className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex ">
+                    <Link
+                      href="/contact"
+                      className="text-white text-sm font-semibold leading-tight"
                     >
-                      {link.text}
-                    </p>
-                  </Link>
-                ))}
-                <div className="px-2 py-2 bg-white rounded-md justify-center items-center gap-2.5 flex">
-                  <Link
-                    href="/contact"
-                    className="text-black text-sm font-semibold  leading-tight"
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </motion.span>
-            )}
-            {isOpen ? (
-              ""
-            ) : (
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#EF7D00"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsOpen(true)}
-                className="cursor-pointer"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </motion.svg>
-            )}
+                      Contact
+                    </Link>
+                  </div>
+                </motion.span>
+              ) : (
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#EF7D00"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setIsOpen(true)}
+                  className="cursor-pointer"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </motion.svg>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

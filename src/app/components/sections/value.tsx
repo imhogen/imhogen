@@ -4,7 +4,11 @@ import { machina } from "../exports";
 
 export default function Value() {
   return (
-    <div className="w-full  text-center  " style={machina.style} id="value">
+    <div
+      className="w-full  text-center pt-20 "
+      style={machina.style}
+      id="value"
+    >
       <div className="sub-heading  leading-tight">
         <span className="text-white ">Our Unique </span>
         <span className="imho-gradient-text-to-r ">Value</span>

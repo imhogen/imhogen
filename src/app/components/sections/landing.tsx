@@ -18,8 +18,8 @@ export default function Landing() {
                          lg:leading-tight font-extrabold  leading-[30px]"
             style={machina.style}
           >
-            <span className="text-white ">We </span>
-            <span className=" imho-gradient-text-to-b">Design</span>
+            <span className="text-white ">We</span>
+            <span className="imho-gradient-text-to-b">Design</span>
             <span className="text-white "> Highly Functional and Robust </span>
             <span className="imho-gradient-text-to-r ">Products</span>
             <span className="text-white"> & Processes</span>

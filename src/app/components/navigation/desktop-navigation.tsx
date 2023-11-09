@@ -13,7 +13,7 @@ const links = [
 function Navbar() {
   return (
     <>
-      <div className="hidden fixed  mt-5 lg:inline-flex  w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
+      <div className="hidden fixed  mt-5 lg:inline-flex w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
         <Link href="/">
           <Image
             src="/images/golden-eye.webp"
@@ -25,8 +25,8 @@ function Navbar() {
 
         <div
           className="px-4 py-2  rounded-lg border border-1
-                     border-gray-200 border-opacity-20 backdrop-blur-2xl 
-                     justify-start items-center gap-8 flex"
+                     border-gray-200 border-opacity-20  
+                     justify-start items-center gap-8 flex div-with-bg-and-blur"
         >
           {links.map((link, index) => (
             <Link

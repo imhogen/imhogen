@@ -35,3 +35,8 @@ export interface teamProps {
   Src: string;
   alt: string;
 }
+
+export interface navLinkProps {
+  link: string;
+  href: string;
+}

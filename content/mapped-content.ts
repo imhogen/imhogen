@@ -4,6 +4,7 @@ import {
   valueProps,
   HelpProps,
   teamProps,
+  navLinkProps,
 } from "../Types";
 
 export const value: valueProps[] = [
@@ -136,4 +137,13 @@ export const team: teamProps[] = [
     Src: "/images/our-team-1.webp",
     alt: "image",
   },
+];
+
+// to do: make navigation links functional
+export const navLinks: navLinkProps[] = [
+  { link: "Home", href: "/" },
+  { link: "Portfolio", href: "/" },
+  { link: "Our Process", href: "/" },
+  { link: "Our Team", href: "/" },
+  { link: "Blog", href: "/blog" },
 ];

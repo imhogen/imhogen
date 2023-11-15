@@ -40,3 +40,10 @@ export interface navLinkProps {
   link: string;
   href: string;
 }
+
+export interface blogPostsProps {
+  src: string;
+  title: string;
+  description: string;
+  link: string;
+}

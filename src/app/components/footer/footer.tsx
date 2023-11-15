@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
         <div className="justify-start items-center gap-5 flex">
           <div className="w-6 h-6 relative">
-            <Link href="https://www.linkedin.com/company/imho-co-lt/">
+            <Link href="https://www.linkedin.com/company/imho-ltd/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

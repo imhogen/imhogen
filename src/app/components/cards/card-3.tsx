@@ -3,16 +3,16 @@ import { machina, redhat } from "../exports";
 
 export default function Card() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2  h-full w-full  gap-5  mx-auto py-10 ">
+    <div className="grid grid-cols-1 lg:grid-cols-2  h-fit w-full gap-4 lg:gap-8  mx-auto px-2 ">
       {help.map((item, index) => (
         <div
           key={index}
-          className=" background-white-card   h-full  lg:w-11/12  flex-col  items-center lg:justify-around lg:items-start inline-flex"
+          className=" background-white-card h-full  lg:w-full  flex-col  items-center lg:justify-around lg:items-start inline-flex px-4"
         >
-          <div className="w-28 relative  ">
+          <div className="w-36 relative  ">
             <img src={item.customIcon} width={200} height={200} alt="icon" />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 px-4">
             <h1
               className="title-white-card text-center lg:text-left "
               style={machina.style}

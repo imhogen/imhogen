@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { text: "Home", href: "/" },
-  { text: "Portfolio", href: "/portfolio" },
-  { text: "Our Process", href: "/process" },
-  { text: "Our Team", href: "/team" },
-  { text: "Blog", href: "/blog" },
+  { text: "Portfolio", href: "#portfolio" },
+  { text: "Our Process", href: "#process" },
+  { text: "Our Team", href: "#team" },
+  { text: "Blog", href: "#blog" },
 ];
 
 function Dropdown() {
@@ -20,11 +20,22 @@ function Dropdown() {
     setIsOpen(false);
   };
 
+  //prevents scrolling when dropdown is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden";
+      document.body.style.position = "static";
+    } else {
+      document.body.style.overflowY = "auto";
+      document.body.style.position = "static";
+    }
+  }, [isOpen]);
+
   return (
     <>
       <div
-        className="fixed px-5  w-full md:hidden 
-                  h-20 py-4  justify-between items-center inline-flex top-0 z-30 "
+        className="fixed px-5 w-full md:hidden 
+                  h-20 py-4 justify-between items-center inline-flex top-0 z-30"
       >
         <Link href="/" className="z-20">
           <Image
@@ -65,8 +76,8 @@ function Dropdown() {
               </motion.span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#EF7D00"
@@ -74,7 +85,7 @@ function Dropdown() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 onClick={() => setIsOpen(false)}
-                className="z-20"
+                className="z-20 div-with-bg-and-blur rounded-md p-1"
               >
                 {" "}
                 man
@@ -85,8 +96,8 @@ function Dropdown() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#EF7D00"
@@ -94,7 +105,7 @@ function Dropdown() {
               strokeLinecap="round"
               strokeLinejoin="round"
               onClick={() => setIsOpen(true)}
-              className=""
+              className="div-with-bg-and-blur rounded-md p-1"
             >
               <line x1="4" x2="20" y1="12" y2="12" />
               <line x1="4" x2="20" y1="6" y2="6" />

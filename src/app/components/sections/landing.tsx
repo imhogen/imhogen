@@ -9,13 +9,13 @@ export default function Landing() {
     <>
       {/* the inline css style = {machina.style} would be worked on to follow best practices */}
       <section
-        className="w-full h-full lg:h-screen flex-col lg:flex-row  items-center gap-10 lg:gap-16 flex "
+        className="w-full h-full lg:h-screen flex-col lg:flex-row items-center gap-10 lg:gap-16 flex mt-24 md:mt-32"
         id="/"
       >
-        <article className="   flex-col justify-center  gap-4 flex">
+        <article className="flex-col justify-center gap-4 flex">
           <div
             className=" lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
-                         lg:leading-tight font-extrabold  leading-[30px]"
+                         lg:leading-tight font-extrabold leading-[30px] "
             style={machina.style}
           >
             <span className="text-white ">We</span>{" "}

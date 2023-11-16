@@ -5,7 +5,7 @@ import { machina } from "../exports";
 export default function Value() {
   return (
     <div
-      className="w-full  text-center pt-20 "
+      className="w-full h-fit text-center py-20"
       style={machina.style}
       id="value"
     >

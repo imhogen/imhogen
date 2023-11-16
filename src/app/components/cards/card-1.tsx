@@ -3,11 +3,11 @@ import { value } from "../../../../content/mapped-content";
 
 export default function Card() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  h-full w-full gap-5 mx-auto py-10 ">
+    <div className="grid grid-cols-1 md:grid-cols-2  h-full w-full gap-5 mx-auto pt-10 px-4  ">
       {value.map((item, index) => (
         <div
           key={index}
-          className=" background-white-card w-11/12  h-full  flex-col  items-center  inline-flex"
+          className=" background-white-card w-full  h-full  flex-col  items-center  inline-flex"
         >
           <div className="w-36 relative">
             <img src={item.src} width={200} height={200} alt="icon" />

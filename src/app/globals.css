@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 3rem;
 }
 
 body {
@@ -88,4 +88,8 @@ body {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.no-scroll {
+  overflow: hidden;
 }

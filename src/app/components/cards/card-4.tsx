@@ -15,7 +15,7 @@ export default function Card() {
           key={index}
         >
           {/* text */}
-          <div className="flex flex-col md:w-11/12 lg:w-2/5   gap-5">
+          <div className="flex flex-col md:w-11/12 lg:w-2/5 gap-5">
             <h1
               className="text-lg text-center md:text-left font-bold lg:text-xl text-white opacity-80 "
               style={redhat.style}

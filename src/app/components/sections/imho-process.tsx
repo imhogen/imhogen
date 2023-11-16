@@ -6,7 +6,7 @@ export default function Process() {
   return (
     <div>
       <div
-        className="w-screen  h-full flex flex-col justify-start items-center gap-10 pt-10"
+        className="w-screen  h-full flex flex-col justify-start items-center gap-10 py-20"
         id="process"
       >
         <div className="text-center sub-heading" style={machina.style}>
@@ -17,14 +17,14 @@ export default function Process() {
         </div>
         <div className="w-full  max-w-4/5 ">
           <div
-            className="w-full lg:w-2/5 mx-auto relative"
-            style={{ paddingTop: "130%" }}
+            className="w-full lg:w-2/5 mx-auto relative pb-48"
+            style={{ paddingTop: "50%" }}
           >
             <Image
               src="/images/imho_process.webp"
-              alt="imhos process"
-              layout="fill"
+              alt="imho's process"
               objectFit="contain"
+              layout="fill"
             />
           </div>
         </div>

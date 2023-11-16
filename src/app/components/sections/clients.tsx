@@ -7,7 +7,7 @@ import { client } from "../../../../content/mapped-content";
 export default function Clients() {
   return (
     <div
-      className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex pt-10"
+      className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex py-20"
       style={machina.style}
     >
       <div className="text-center sub-heading leading-tight">

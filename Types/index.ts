@@ -36,7 +36,14 @@ export interface teamProps {
   alt: string;
 }
 
-export interface linkProps {
-  text: string;
+export interface navLinkProps {
+  link: string;
   href: string;
+}
+
+export interface blogPostsProps {
+  src: string;
+  title: string;
+  description: string;
+  link: string;
 }

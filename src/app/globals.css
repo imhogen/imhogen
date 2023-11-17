@@ -68,6 +68,14 @@ body {
 .background-white-card {
   @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-200 rounded-2xl;
 }
+
+.imho-contacts {
+  @apply text-white text-xs text-right;
+}
+
+.input-field {
+  @apply w-3/4 bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm;
+}
 .not-found {
   /* Other styles... */
   background: url(../../public/images/imho-pattern.webp);
@@ -79,6 +87,12 @@ body {
 
   /* Set the background size to a smaller value */
   background-size: 50%; /* Adjust this value to your desired size */
+}
+
+.blog-hero-background {
+  background: url(../../public/images/imho-pattern.webp);
+  color: white;
+  background-size: 40%;
 }
 
 /* Adds a bit of bg to improve conflict with white bg */

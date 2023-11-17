@@ -5,7 +5,8 @@ import {
   valueProps,
   HelpProps,
   teamProps,
-  linkProps,
+  navLinkProps,
+  blogPostsProps,
 } from "../Types";
 
 export const value: valueProps[] = [
@@ -140,10 +141,70 @@ export const team: teamProps[] = [
   },
 ];
 
-export const link: linkProps[] = [
-  { text: "Home", href: "/" },
-  { text: "Portfolio", href: "#portfolio" },
-  { text: "Our Process", href: "#process" },
-  { text: "Our Team", href: "#team" },
-  { text: "Blog", href: "/blog" },
+// to do: make navigation links functional
+export const navLinks: navLinkProps[] = [
+  { link: "Home", href: "/" },
+  { link: "Portfolio", href: "/#portfolio" },
+  { link: "Our Process", href: "/#process" },
+  { link: "Our Team", href: "/#team" },
+  { link: "Blog", href: "/blog" },
+];
+
+export const blogPosts: blogPostsProps[] = [
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
 ];

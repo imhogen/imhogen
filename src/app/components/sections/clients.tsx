@@ -29,6 +29,7 @@ export default function Clients() {
                 width={200}
                 height={200}
                 className="opacity-80"
+                layout="responsive"
               />
             </div>
           ))}

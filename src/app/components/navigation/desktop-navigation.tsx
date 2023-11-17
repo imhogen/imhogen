@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { link } from "../../../../content/mapped-content";
+import { navLinks } from "../../../../content/mapped-content";
 
 function Navbar() {
   return (
@@ -21,7 +21,7 @@ function Navbar() {
                      border-gray-200 border-opacity-20  
                      justify-start items-center gap-8 flex div-with-bg-and-blur"
         >
-          {link.map((link, index) => (
+          {navLinks.map((link, index) => (
             <Link
               key={index}
               href={link.href}
@@ -29,13 +29,14 @@ function Navbar() {
                        leading-normal hover:text-opacity-80
                         transition duration-2000 ease"
             >
-              {link.text}
+              {link.link}
             </Link>
           ))}
           <div className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex ">
+            {/* TODO: make contact button functional  */}
             <Link
-              href="/contact"
-              className="text-white text-base font-normal  leading-tight"
+              href="#"
+              className="text-white text-base font-normal leading-tight"
             >
               Contact
             </Link>

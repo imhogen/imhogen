@@ -9,6 +9,7 @@ import Portfolio from "./sections/portfolio";
 
 import Help from "./sections/help";
 import Team from "./sections/our-team";
+import { navLinks } from "../../../content/mapped-content";
 
 const exports = {
   Dropdown,
@@ -32,6 +33,7 @@ export {
   Clients,
   Help,
   Team,
+  
 };
 
 export const machina = localFont({

@@ -7,10 +7,6 @@ html {
   scroll-padding-top: 2rem;
 }
 
-.Shell:first-child {
-  scroll-padding-top: 10rem;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -70,7 +66,7 @@ body {
 }
 
 .imho-contacts {
-  @apply text-white text-xs text-right;
+  @apply text-white text-sm text-right;
 }
 
 .input-field {

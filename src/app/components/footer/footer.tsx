@@ -47,7 +47,7 @@ const Footer = () => {
                 LTD.
               </p>
               <p
-                className="text-white text-xs pt-2"
+                className="text-white text-sm pt-2"
                 style={calligraffitti.style}
               >
                 Make it real
@@ -58,10 +58,10 @@ const Footer = () => {
 
         {/* mobile devices only */}
         <div
-          className="flex flex-col text-center justify-between w-full items-center md:hidden gap-2"
+          className="flex flex-col text-center justify-between w-full items-center md:hidden"
           style={redhat.style}
         >
-          <div className="text-white text-sm">
+          <div className="text-white text-xs">
             KBI KNUST, Commercial Area
             <br />
             Kumasi, Ghana

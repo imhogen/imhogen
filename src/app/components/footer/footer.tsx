@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       className="mx-6 mt-20 mb-10 w-11/12 h-fit p-5 rounded-2xl 
-                     gap-10 md:gap-4 flex-col justify-start items-center
+                     gap-4 md:gap-4 flex-col justify-start items-center
                      inline-flex border border-1
                      border-gray-200 border-opacity-20"
     >
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[0.1px] w-full bg-gray-200 bg-opacity-20 hidden md:block"></div>
+      <div className="h-[1px] w-full bg-gray-200 bg-opacity-20 hidden md:block"></div>
       <section className="flex flex-col items-center md:flex-row w-full gap-4 justify-between">
         <div className="w-4/5 flex gap-2 md:flex-col justify-center md:w-2/5 lg:w-1/5 lg:gap-4">
           <Link href="/">
@@ -61,19 +61,19 @@ const Footer = () => {
           className="flex flex-col text-center justify-between w-full items-center md:hidden"
           style={redhat.style}
         >
-          <div className="text-white text-xs">
+          <div className="text-white text-sm">
             KBI KNUST, Commercial Area
             <br />
             Kumasi, Ghana
           </div>
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-1">
             <div className="imho-contacts">admin@imhogen.com</div>
             <div className="imho-contacts">
               +233 501 654 825 / +233 553 812 626
             </div>
           </div>
         </div>
-        <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20 md:hidden"></div>
+        <div className="h-[1px] w-full bg-gray-200 bg-opacity-20 md:hidden"></div>
 
         <div
           className="flex justify-between w-full md:justify-end"
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
       </section>
 
-      <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20"></div>
+      <div className="h-[1px] w-full   bg-gray-200 bg-opacity-20"></div>
       <div className="w-full flex flex-col justify-between items-center gap-3">
         <div
           className="text-white text-opacity-70 text-sm leading-[21px]"

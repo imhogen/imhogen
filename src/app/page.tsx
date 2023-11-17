@@ -15,7 +15,7 @@ export default function Home() {
                   max-w-full mx-auto "
     >
       {/* Home */}
-      <Shell className="relative lg:top-0 gap-10 lg:gap-36  ">
+      <Shell className="Shell relative lg:top-0 gap-10 lg:gap-36  ">
         <Landing />
         <Value />
         <Clients />

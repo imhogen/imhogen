@@ -1,19 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-const links = [
-  { text: "Home", href: "/" },
-  { text: "Portfolio", href: "/portfolio" },
-  { text: "Our Process", href: "/process" },
-  { text: "Our Team", href: "/team" },
-  { text: "Blog", href: "/blog" },
-];
+import { link } from "../../../../content/mapped-content";
 
 function Navbar() {
   return (
     <>
-      <div className="hidden fixed  mt-5 lg:inline-flex w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
+      <div className="hidden fixed mt-2 lg:inline-flex w-11/12 h-20 py-2 rounded-lg justify-between items-center  top-0 z-50">
         <Link href="/">
           <Image
             src="/images/golden-eye.webp"
@@ -28,7 +21,7 @@ function Navbar() {
                      border-gray-200 border-opacity-20  
                      justify-start items-center gap-8 flex div-with-bg-and-blur"
         >
-          {links.map((link, index) => (
+          {link.map((link, index) => (
             <Link
               key={index}
               href={link.href}

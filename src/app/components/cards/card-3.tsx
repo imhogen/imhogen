@@ -3,7 +3,7 @@ import { machina, redhat } from "../exports";
 
 export default function Card() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2  h-fit w-full gap-4 lg:gap-8  mx-auto px-2 ">
+    <div className="grid grid-cols-1 lg:grid-cols-2  h-fit w-full gap-5 mx-auto px-2 ">
       {help.map((item, index) => (
         <div
           key={index}

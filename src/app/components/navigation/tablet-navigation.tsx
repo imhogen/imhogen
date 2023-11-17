@@ -3,14 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-const links = [
-  { text: "Home", href: "/" },
-  { text: "Portfolio", href: "#portfolio" },
-  { text: "Our Process", href: "#process" },
-  { text: "Our Team", href: "#team" },
-  { text: "Blog", href: "#blog" },
-];
+import { link } from "../../../../content/mapped-content";
 
 function Slider() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +50,7 @@ function Slider() {
                   transition={{ duration: 0.5 }}
                   className="flex flex-row h-10 py-1 gap-8 items-center"
                 >
-                  {links.map((link, index) => (
+                  {link.map((link, index) => (
                     <Link key={index} href={link.href} passHref>
                       <p
                         className="text-white text-opacity-60 text-sm font-light leading-normal transition duration-2000 ease align-middle"
@@ -79,8 +72,8 @@ function Slider() {
               ) : (
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#EF7D00"

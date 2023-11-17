@@ -4,20 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const links = [
-  { text: "Home", href: "/" },
-  { text: "Portfolio", href: "#portfolio" },
-  { text: "Our Process", href: "#process" },
-  { text: "Our Team", href: "#team" },
-  { text: "Blog", href: "#blog" },
-];
+import { link } from "../../../../content/mapped-content";
+import { easeInOut } from "framer-motion/dom";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // const handleLinkClick = () => {
+  //   let openState = isOpen;
+  //   setIsOpen(!openState);
+  // };
+
   const handleLinkClick = () => {
-    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 500); // Adjust the delay time as needed
   };
 
   //prevents scrolling when dropdown is open
@@ -49,26 +50,33 @@ function Dropdown() {
           {isOpen ? (
             <>
               <motion.span
-                initial={{ maxHeight: 0 }}
-                animate={{ maxHeight: isOpen ? "100vh" : "0rem" }}
-                exit={{ maxHeight: 0 }}
-                transition={{ duration: 0.5 }}
-                className="flex flex-col h-fit pt-20 pb-4 px-4 gap-8 items-center w-full bg-black rounded-lg shadow-lg absolute left-0 top-0 div-with-bg-and-blur-nav"
+                initial={{ maxHeight: 0, opacity: 0 }} // Initial state: invisible and no height
+                animate={{ maxHeight: isOpen ? "100vh" : "0rem", opacity: 1 }} // Visible state: full height and fully visible
+                exit={{ maxHeight: 0, opacity: 0 }} // Exit state: no height and invisible
+                transition={{ duration: 0.5, ease: "easeInOut" }} // Transition duration and easing function
+                className="flex flex-col h-fit pt-16 pb-4 px-4 items-center w-full bg-black rounded-lg shadow-lg absolute left-0 top-0 div-with-bg-and-blur-nav"
               >
-                {links.map((link, index) => (
+                {link.map((link, index) => (
                   <Link key={index} href={link.href} passHref>
-                    <p
-                      className="text-white text-opacity-60 text-sm font-light leading-normal transition duration-500 ease align-middle"
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }} // Initial state: invisible and slightly shifted up
+                      animate={{ opacity: 1, y: 0 }} // Visible state: fully visible and in its original position
+                      exit={{ opacity: 0, y: -10 }} // Exit state: invisible and slightly shifted up
+                      transition={{
+                        animate: { duration: 0.5, ease: "easeInOut" }, // Transition duration and easing function for animate state
+                        exit: { duration: 0.5, ease: "easeInOut", delay: 0.5 }, // Transition duration, easing function and delay for exit state
+                      }}
+                      className="text-white text-opacity-60 font-light leading-normal transition duration-500 ease-in-out align-middle p-4"
                       onClick={handleLinkClick}
                     >
                       {link.text}
-                    </p>
+                    </motion.p>
                   </Link>
                 ))}
-                <div className="w-full px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex shadow-md">
+                <div className="w-full px-4 py-3 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex shadow-md">
                   <Link
                     href="/contact"
-                    className="text-white text-sm font-semibold leading-tight "
+                    className="text-white font-semibold leading-tight "
                   >
                     Contact
                   </Link>

@@ -4,7 +4,11 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 3rem;
+  scroll-padding-top: 2rem;
+}
+
+.Shell:first-child {
+  scroll-padding-top: 10rem;
 }
 
 body {
@@ -62,7 +66,7 @@ body {
 }
 
 .background-white-card {
-  @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-100 rounded-2xl;
+  @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-200 rounded-2xl;
 }
 .not-found {
   /* Other styles... */

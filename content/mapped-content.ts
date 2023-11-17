@@ -1,9 +1,11 @@
+import { LinkProps } from "next/link";
 import {
   PortfolioProps,
   clientsProps,
   valueProps,
   HelpProps,
   teamProps,
+  linkProps,
 } from "../Types";
 
 export const value: valueProps[] = [
@@ -136,4 +138,12 @@ export const team: teamProps[] = [
     Src: "/images/our-team-1.webp",
     alt: "image",
   },
+];
+
+export const link: linkProps[] = [
+  { text: "Home", href: "/" },
+  { text: "Portfolio", href: "#portfolio" },
+  { text: "Our Process", href: "#process" },
+  { text: "Our Team", href: "#team" },
+  { text: "Blog", href: "/blog" },
 ];

@@ -9,7 +9,7 @@ export default function Value() {
       style={machina.style}
       id="value"
     >
-      <div className="sub-heading  leading-tight">
+      <div className="sub-heading leading-tight">
         <span className="text-white ">Our Unique </span>
         <span className="imho-gradient-text-to-r ">Value</span>
         <span className="text-white "> and Where We </span>

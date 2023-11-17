@@ -4,13 +4,16 @@ import { machina, redhat, calligraffitti } from "../exports";
 const Footer = () => {
   return (
     <footer
-      className="mx-6 mt-20 mb-10 w-11/12 h-fit p-3 md:p-7 rounded-xl 
-                     gap-10 md:gap-2 flex-col justify-start items-center
-                     inline-flex   border border-1
+      className="mx-6 mt-20 mb-10 w-11/12 h-fit p-5 rounded-2xl 
+                     gap-10 md:gap-4 flex-col justify-start items-center
+                     inline-flex border border-1
                      border-gray-200 border-opacity-20"
     >
       {/* medium and large screens only */}
-      <div className=" md:flex justify-between w-full items-center hidden">
+      <div
+        className=" md:flex justify-between w-full items-center hidden"
+        style={redhat.style}
+      >
         <div className="text-white text-sm">
           KBI KNUST, Commercial Area
           <br />
@@ -23,9 +26,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20 hidden md:block"></div>
-      <section className="flex flex-col  md:flex-row w-full gap-5 ">
-        <div className="w-4/5 flex gap-10 justify-start md:flex-col md:justify-center md:w-2/5 lg:w-1/5 md:gap-0">
+      <div className="h-[0.1px] w-full bg-gray-200 bg-opacity-20 hidden md:block"></div>
+      <section className="flex flex-col items-center md:flex-row w-full gap-4 justify-between">
+        <div className="w-4/5 flex gap-2 md:flex-col justify-center md:w-2/5 lg:w-1/5 lg:gap-4">
           <Link href="/">
             <Image
               src="/images/golden-eye.webp"
@@ -40,10 +43,11 @@ const Footer = () => {
                 className="text-white text-md md:text-2xl leading-5 "
                 style={machina.style}
               >
-                Innovate Make and Have Ours LTD.
+                Innovate <br /> Make and <br /> Have Ours <br />
+                LTD.
               </p>
               <p
-                className="text-white text-xs  pt-2"
+                className="text-white text-xs pt-2"
                 style={calligraffitti.style}
               >
                 Make it real
@@ -54,15 +58,15 @@ const Footer = () => {
 
         {/*  */}
         <div
-          className="flex flex-row  justify-between w-full items-center md:hidden"
+          className="flex flex-row justify-between w-full items-center md:hidden"
           style={redhat.style}
         >
-          <div className="text-white text-xs  mb-3">
+          <div className="text-white text-xs mb-3">
             KBI KNUST, Commercial Area
             <br />
             Kumasi, Ghana
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <div className="text-white text-xs text-right">
               admin@imhogen.com
             </div>
@@ -135,7 +139,10 @@ const Footer = () => {
 
       <div className="h-[0.1px] w-full   bg-gray-200 bg-opacity-20"></div>
       <div className="w-full flex flex-col justify-between items-center gap-3">
-        <div className="text-white text-opacity-70 text-sm leading-[21px]">
+        <div
+          className="text-white text-opacity-70 text-sm leading-[21px]"
+          style={redhat.style}
+        >
           &copy; 2023 IMHO. All rights reserved.
         </div>
         <div className="justify-start items-center gap-5 flex">

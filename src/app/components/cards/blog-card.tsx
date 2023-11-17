@@ -5,7 +5,7 @@ import { redhat } from "../exports";
 
 export default function Card() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 ">
+    <div className="grid grid-cols-1 lg:grid-cols-3 w-fit gap-10 ">
       {blogPosts.map((item, index) => (
         <div
           key={index}
@@ -16,7 +16,7 @@ export default function Card() {
             className=" h-fit rounded-lg w-full"
             src={item.src}
             height={100}
-            width={100}
+            width={300}
             alt="blog-card-picture"
           />
           <div className="  flex-col justify-center items-start gap-2 flex">

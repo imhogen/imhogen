@@ -4,7 +4,7 @@ import { Input } from "./input-field";
 
 const SearchBox = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full flex justify-center">
       <div className="relative">
         <div className="flex items-center">
           <Input

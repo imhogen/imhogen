@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${redhat.variable} `}>
-        {!hideNavAndFooter && <Navbar />}
+        {/* {!hideNavAndFooter && <Navbar />}
         {!hideNavAndFooter && <Dropdown />}
-        {!hideNavAndFooter && <Slider />}
+        {!hideNavAndFooter && <Slider />} */}
 
         {children}
         {!hideNavAndFooter && <Footer />}

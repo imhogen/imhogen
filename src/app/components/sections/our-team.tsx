@@ -9,7 +9,7 @@ export default function Team() {
       id="team"
     >
       <section
-        className="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+        className="text-white text-center sub-heading font-bold leading-tight"
         style={machina.style}
       >
         Our <span className="imho-gradient-text-to-r">Team</span>

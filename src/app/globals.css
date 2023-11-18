@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 2rem;
 }
 
 body {
@@ -62,11 +62,11 @@ body {
 }
 
 .background-white-card {
-  @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-100 rounded-2xl;
+  @apply px-2  py-10 lg:px-10 mx-auto  bg-gray-200 rounded-2xl;
 }
 
 .imho-contacts {
-  @apply text-white text-xs text-right;
+  @apply text-white text-sm text-right;
 }
 
 .input-field {
@@ -102,4 +102,8 @@ body {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.no-scroll {
+  overflow: hidden;
 }

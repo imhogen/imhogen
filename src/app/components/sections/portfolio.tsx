@@ -5,7 +5,7 @@ import { machina } from "../exports";
 export default function Portfolio() {
   return (
     <div
-      className="  w-full h-fit flex-col  justify-center items-center gap-10 flex pt-20"
+      className="  w-full h-fit flex-col  justify-center items-center gap-10 flex pt-10"
       id="portfolio"
     >
       <section

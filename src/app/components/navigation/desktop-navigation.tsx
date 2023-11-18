@@ -6,7 +6,7 @@ import { navLinks } from "../../../../content/mapped-content";
 function Navbar() {
   return (
     <>
-      <div className="hidden fixed  mt-5 lg:inline-flex w-11/12 h-20 py-4 rounded-lg justify-between items-center  top-0 z-50">
+      <div className="hidden fixed mt-2 lg:inline-flex w-11/12 h-20 py-2 rounded-lg justify-between items-center  top-0 z-50">
         <Link href="/">
           <Image
             src="/images/golden-eye.webp"

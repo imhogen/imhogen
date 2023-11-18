@@ -2,22 +2,38 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "../../../../content/mapped-content";
 
 function Dropdown() {
   const [open, setOpen] = useState(false);
 
+  // const handleLinkClick = () => {
+  //   let openState = isOpen;
+  //   setIsOpen(!openState);
+  // };
+
   const handleLinkClick = () => {
     setOpen(false);
   };
 
+  //prevents scrolling when dropdown is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden";
+      document.body.style.position = "static";
+    } else {
+      document.body.style.overflowY = "auto";
+      document.body.style.position = "static";
+    }
+  }, [open]);
+
   return (
     <>
       <div
-        className="fixed px-5  w-full md:hidden 
-                  h-20 py-4  justify-between items-center inline-flex top-0 z-30 "
+        className="fixed px-5 w-full md:hidden 
+                  h-20 py-4 justify-between items-center inline-flex top-0 z-30"
       >
         <Link href="/" className="z-20">
           <Image
@@ -61,8 +77,8 @@ function Dropdown() {
               </motion.span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#EF7D00"
@@ -79,8 +95,8 @@ function Dropdown() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#EF7D00"

@@ -1,3 +1,4 @@
+import { LinkProps } from "next/link";
 import {
   PortfolioProps,
   clientsProps,
@@ -143,9 +144,9 @@ export const team: teamProps[] = [
 // to do: make navigation links functional
 export const navLinks: navLinkProps[] = [
   { link: "Home", href: "/" },
-  { link: "Portfolio", href: "/" },
-  { link: "Our Process", href: "/" },
-  { link: "Our Team", href: "/" },
+  { link: "Portfolio", href: "/#portfolio" },
+  { link: "Our Process", href: "/#process" },
+  { link: "Our Team", href: "/#team" },
   { link: "Blog", href: "/blog" },
 ];
 

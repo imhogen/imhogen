@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <main
       className="flex min-h-screen flex-col justify-center items-center overflow-x-hidden overflow-y-hidden
-                  max-w-screen mx-auto "
+                  max-w-full mx-auto "
     >
       <Navbar />
       <Dropdown />
       <Slider />
       {/* Home */}
-      <Shell className="relative top-[4.5rem] md:top-[8rem] lg:top-0 gap-10 lg:gap-36  ">
+      <Shell className="Shell relative lg:top-0 gap-10 lg:gap-36  ">
         <Landing />
         <Value />
         <Clients />

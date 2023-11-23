@@ -1,4 +1,5 @@
 import Card from "@/app/components/cards/blog-card";
+import ContactForm from "@/app/components/ui/contact-form";
 import React from "react";
 
 const Landing = () => {

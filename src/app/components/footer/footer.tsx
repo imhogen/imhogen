@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { machina, redhat, calligraffitti } from "../exports";
+import ContactForm from "../ui/contact-form";
 const Footer = () => {
   return (
     <footer
-      className="mx-6 mt-20 mb-10 w-11/12 h-fit p-5 rounded-2xl 
+      className="mx-6 mt-20 mb-10 w-11/12 h-fit p-5 rounded-md
                      gap-4 md:gap-4 flex-col justify-start items-center
                      inline-flex border border-1
                      border-gray-200 border-opacity-20"
+      id="contact"
     >
       {/* medium and large screens only */}
       <div
@@ -76,59 +78,11 @@ const Footer = () => {
         <div className="h-[1px] w-full bg-gray-200 bg-opacity-20 md:hidden"></div>
 
         <div
-          className="flex justify-between w-full md:justify-end"
+          className="flex justify-between w-full  md:justify-end"
           style={redhat.style}
         >
           {/* contact form */}
-          <form className="w-full md:w-4/5 lg:w-2/5 text-white flex flex-col mx-auto md:mx-0">
-            <h1 className="text-white">Send us a message</h1>
-
-            <div className="w-full flex gap-2 py-2">
-              <input
-                type="text"
-                placeholder="Firstname"
-                className="input-field"
-              />
-              <input
-                type="text"
-                placeholder="Lastname"
-                className="input-field"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm"
-            />
-            <div className="rounded-lg border-gray-100 border border-opacity-30 my-2 flex flex-col grow">
-              <textarea
-                className="bg-transparent w-full outline-none resize-none flex grow text-sm p-2"
-                placeholder="Type your message here"
-              />
-              <div className="w-8 h-6 px-2 py-1 bg-[#EF7D00] rounded-lg justify-start items-center gap-2.5 inline-flex m-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="lucide lucide-paperclip"
-                >
-                  <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
-                </svg>
-              </div>
-            </div>
-            <button
-              type="submit"
-              className="w-full h-9 px-4 py-2 bg-[#EF7D00] rounded-lg justify-center items-center gap-2.5 inline-flex"
-            >
-              Send Message
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 

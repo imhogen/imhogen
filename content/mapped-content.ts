@@ -153,58 +153,16 @@ export const navLinks: navLinkProps[] = [
 export const blogPosts: blogPostsProps[] = [
   {
     src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
+    title: "Ghana's current industrialization",
     description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+      "On the 11th of March, 1964, Kwame Nkrumah submitted “blueprint of our goal. launching the seven-year development plan.” to the parliament of Ghana..",
     link: "",
   },
   {
     src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
+    title: "Innovate Make and Have Ours Co. Ltd.",
     description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
-    link: "",
-  },
-  {
-    src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
-    description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
-    link: "",
-  },
-  {
-    src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
-    description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
-    link: "",
-  },
-  {
-    src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
-    description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
-    link: "",
-  },
-  {
-    src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
-    description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
-    link: "",
-  },
-  {
-    src: "/images/blog-image.png ",
-    title:
-      "  Electronic Product Design — and the Technology That Makes It Possible",
-    description:
-      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+      "Engineering Design Companies, A Catalyst for National Development    A paper from the IMHO team",
     link: "",
   },
 ];

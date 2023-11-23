@@ -32,14 +32,11 @@ function Navbar() {
               {link.link}
             </Link>
           ))}
-          <div className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex ">
-            {/* TODO: make contact button functional  */}
-            <Link
-              href="#"
-              className="text-white text-base font-normal leading-tight"
-            >
-              Contact
-            </Link>
+          <div
+            className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center 
+                      gap-2.5 flex text-white text-base font-normal "
+          >
+            <Link href="#contact">Contact</Link>
           </div>
         </div>
       </div>

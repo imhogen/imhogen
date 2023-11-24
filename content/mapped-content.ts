@@ -165,4 +165,44 @@ export const blogPosts: blogPostsProps[] = [
       "Engineering Design Companies, A Catalyst for National Development    A paper from the IMHO team",
     link: "",
   },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
+  {
+    src: "/images/blog-image.png ",
+    title:
+      "  Electronic Product Design — and the Technology That Makes It Possible",
+    description:
+      "As time goes on, more products are designed with integrated electronics to provide specific functionality or connectivity.",
+    link: "",
+  },
 ];

@@ -5,17 +5,17 @@ import React, { useState } from "react";
 
 const tabs = [
   {
-    label: "All",
+    label: "all",
     path: "/blog/",
     query: { tab: "all" },
   },
   {
-    label: "Industry Trends",
+    label: "industry trends",
     path: "/blog/trending",
     query: { tab: "trends" },
   },
   {
-    label: "Case Studies",
+    label: "case studies",
     path: "/blog/case",
     query: { tab: "studies" },
   },

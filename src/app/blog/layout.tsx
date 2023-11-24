@@ -10,9 +10,8 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <Slider />
       <Dropdown />
       <Hero />
-      {/* <Tabs /> */}
 
-      <div className="relative top-[6rem] flex flex-col md:flex-row w-full min-h-screen gap-5">
+      <div className="relative lg:top-[6rem] flex flex-col md:flex-row w-full min-h-screen gap-5">
         <section className="flex-2 ">
           {" "}
           <Tabs />

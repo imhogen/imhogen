@@ -33,7 +33,6 @@ export {
   Clients,
   Help,
   Team,
-  
 };
 
 export const machina = localFont({

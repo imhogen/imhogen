@@ -1,4 +1,8 @@
 "use server";
+import { EmailTemplate } from "@/app/components/email/email-template";
+import { writeFile } from "fs";
+import { join } from "path";
+import React from "react";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -9,9 +13,24 @@ export const sendEmail = async (formData: FormData) => {
   const lastname = formData.get("lastname");
   const email = formData.get("email");
   const message = formData.get("message");
+  const file: File | null = formData.get("file") as unknown as File;
 
-  console.log(email, message, firstname, lastname);
+  if (!file) {
+    throw new Error("No file uploaded");
+  }
 
+  const bytes = await file.arrayBuffer();
+  const buffer = Buffer.from(bytes);
+
+  const path = join("/", "tmp", file.name);
+  await writeFile(path, buffer, (err) => {
+    if (err) throw err;
+    console.log(`open${path} to see the uploaded file`);
+  });
+
+  console.log("running on serer");
+
+  //need to make sure that i work on this block to handle errors
   // if (!message || typeof message !== "string") {
   //   return {
   //     error: "Invalid message",
@@ -26,9 +45,17 @@ export const sendEmail = async (formData: FormData) => {
 
   await resend.emails.send({
     from: "Contact form <onboarding@resend.dev>",
-    to: "danielbraimah256@gmail.com",
+    to: "admin@imhogen.com",
     subject: "Message from contact form",
-    text: message as string,
+    react: React.createElement(EmailTemplate, {
+      firstname: firstname as string,
+      lastname: lastname as string,
+      message: message as string,
+      email: email as string,
+    }),
     reply_to: email as string,
+    attachments: [{ filename: file.name, content: buffer }],
   });
+
+  return { success: true };
 };

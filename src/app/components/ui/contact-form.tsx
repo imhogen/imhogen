@@ -8,6 +8,7 @@ export interface formValues {
   lastname: string;
   email: string;
   message: string;
+  file: string;
 }
 
 const ContactForm = () => {
@@ -49,21 +50,35 @@ const ContactForm = () => {
             className="bg-transparent w-full outline-none resize-none flex  text-sm p-2"
             placeholder="type your message here"
           />
-          <div className="w-8 h-6 px-2 py-1 bg-[#EF7D00] rounded-lg justify-start items-center gap-2.5 inline-flex m-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-paperclip"
+          <div className="flex items-center space-x-2">
+            <label
+              htmlFor="fileInput"
+              className="flex items-center justify-center bg-[#EF7D00] rounded-lg p-2 cursor-pointer m-2"
             >
-              <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
-            </svg>
+              <span className="text-white text-sm px-2">
+                {" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-paperclip"
+                >
+                  <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                </svg>
+              </span>
+            </label>
+            <input
+              type="file"
+              id="fileInput"
+              name="file"
+              className="hidden" // Hide the actual input field
+            />
           </div>
         </div>
         <button

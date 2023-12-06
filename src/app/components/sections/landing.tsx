@@ -2,7 +2,6 @@ import React from "react";
 
 import Image from "next/image";
 import texts from "../../../../content/text-content";
-import { machina, redhat } from "../exports";
 
 export default function Landing() {
   return (

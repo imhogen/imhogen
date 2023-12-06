@@ -2,14 +2,9 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import {
-  Navbar,
-  Slider,
-  Dropdown,
-  redhat,
-  machina,
-} from "./components/exports";
+
 import Footer from "./components/footer/Footer";
+import { redhat, machina } from "./components/exports";
 interface RootLayoutProps {
   children: React.ReactNode;
   hideNavAndFooter?: boolean;

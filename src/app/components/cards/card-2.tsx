@@ -16,22 +16,13 @@ export default function Card() {
         >
           {/* text */}
           <div className="flex flex-col w-full md:w-11/12 lg:w-2/5  text-center md:text-left gap-5">
-            <h1
-              className="text-lg font-bold lg:text-xl text-white opacity-80 "
-              style={redhat.style}
-            >
+            <h1 className="text-lg font-bold lg:text-xl text-white opacity-80 ">
               {item.count}
             </h1>
-            <h1
-              className="text-lg  font-bold lg:text-xl text-white opacity-80 "
-              style={redhat.style}
-            >
+            <h1 className="text-lg  font-bold lg:text-xl text-white opacity-80 ">
               {item.title}
             </h1>
-            <p
-              className="descriptive-text-portfolio text-center md:text-left"
-              style={redhat.style}
-            >
+            <p className="descriptive-text-portfolio text-center md:text-left">
               {item.description}
             </p>
           </div>
@@ -44,7 +35,6 @@ export default function Card() {
                 height={600}
                 width={500}
                 className="rounded-xl"
-                objectFit="cover"
               />
             </div>
           </div>

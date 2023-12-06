@@ -1,5 +1,3 @@
-import Card from "@/app/components/cards/blog-card";
-
 import React from "react";
 
 const Landing = () => {
@@ -9,7 +7,7 @@ const Landing = () => {
     flex flex-col max-h-screen no-scrollbar overflow-x-auto overflow-y-auto items-center 
      max-w-screen mx-auto "
     >
-      <Card />
+      {/* <Card /> */}
     </main>
   );
 };

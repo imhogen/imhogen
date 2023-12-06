@@ -1,14 +1,9 @@
 import React from "react";
-import Card from "../cards/card-1";
-import { machina } from "../exports";
+import Card from "../cards/Card-1";
 
 export default function Value() {
   return (
-    <div
-      className="w-full h-fit text-center py-20"
-      style={machina.style}
-      id="value"
-    >
+    <div className="w-full h-fit text-center py-20 font-machina" id="value">
       <div className="sub-heading leading-tight">
         <span className="text-white ">Our Unique </span>
         <span className="imho-gradient-text-to-r ">Value</span>

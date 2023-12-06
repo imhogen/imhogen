@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../cards/card-2";
+import Card from "../cards/Card-2";
 import { machina } from "../exports";
 
 export default function Portfolio() {
@@ -8,14 +8,11 @@ export default function Portfolio() {
       className="  w-full h-fit flex-col  justify-center items-center gap-10 flex pt-10"
       id="portfolio"
     >
-      <section
-        className="text-white text-center sub-heading font-bold leading-tight"
-        style={machina.style}
-      >
+      <section className="text-white text-center sub-heading font-bold leading-tight font-machina">
         Some <span className="imho-gradient-text-to-b">Portfolio</span>
       </section>
 
-      <section className="">
+      <section className="font-redhat">
         <Card />
       </section>
     </div>

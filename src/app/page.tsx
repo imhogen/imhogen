@@ -9,7 +9,7 @@ import {
   Navbar,
   Slider,
 } from "./components/exports";
-import Process from "./components/sections/imho-process";
+import Process from "./components/sections/Imho-process";
 import { Shell } from "./components/ui/shell";
 export default function Home() {
   return (

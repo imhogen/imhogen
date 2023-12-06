@@ -1,11 +1,17 @@
-import Tabs from "../components/blog/blog-tabs";
-import { Dropdown, Navbar, Slider, redhat } from "../components/exports";
+import Tabs from "../components/blog/Blog-tabs";
+import {
+  Dropdown,
+  Navbar,
+  Slider,
+  machina,
+  redhat,
+} from "../components/exports";
 import Hero from "../components/ui/hero";
 import { Shell } from "../components/ui/shell";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Shell className={`${redhat.variable}   `}>
+    <Shell className={`${machina.variable} ${redhat.variable}`}>
       <Navbar />
       <Slider />
       <Dropdown />

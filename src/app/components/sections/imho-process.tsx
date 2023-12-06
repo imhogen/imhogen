@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { machina } from "../exports";
 
 export default function Process() {
   return (
@@ -9,7 +8,7 @@ export default function Process() {
         className="w-screen  h-full flex flex-col justify-start items-center gap-20 lg:gap-20 py-10"
         id="process"
       >
-        <div className="text-center sub-heading" style={machina.style}>
+        <div className="text-center sub-heading font-machina">
           <span className="imho-gradient-text-to-r font-extrabold leading-10">
             IMHO’s
           </span>
@@ -23,8 +22,6 @@ export default function Process() {
             <Image
               src="/images/imho_process.webp"
               alt="imho's process"
-              // objectFit="contain"
-              // layout="fill"
               width={650}
               height={650}
             />

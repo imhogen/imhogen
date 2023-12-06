@@ -1,5 +1,5 @@
 "use server";
-import { EmailTemplate } from "@/app/components/email/email-template";
+import { EmailTemplate } from "@/app/components/email/Email-template";
 import { writeFile } from "fs";
 import { join } from "path";
 import React from "react";

@@ -1,11 +1,12 @@
-import NavigationBar from "../components/dashboard/navigation";
-import TabSwitcher from "../components/dashboard/tab-switcher";
+
+import NavigationBar from "../components/dashboard/Navigation";
+import TabSwitcher from "../components/dashboard/Tab-switcher";
 import { machina, redhat } from "../components/exports";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className={`px-4 py-10 text-gray-300 w-11/12  mx-auto sm:px-6 lg:px-8 ${redhat.variable}`}
+      className={`px-4 py-10 text-gray-300 w-11/12  mx-auto sm:px-6 lg:px-8 ${redhat.variable} ${machina.variable}`}
     >
       <NavigationBar />
 

@@ -1,27 +1,13 @@
-import localFont from "@next/font/local";
-import Navbar from "./navigation/desktop-navigation";
+import localFont from "next/font/local";
+import Slider from "./navigation/Tablet-navigation";
+import Navbar from "./navigation/Desktop-navigation";
 import Dropdown from "./navigation/mobile-navigation";
-import Slider from "./navigation/tablet-navigation";
-import Landing from "./sections/landing";
-import Value from "./sections/value";
-import Clients from "./sections/clients";
-import Portfolio from "./sections/portfolio";
-
-import Help from "./sections/help";
-import Team from "./sections/our-team";
-import { navLinks } from "../../../content/mapped-content";
-
-const exports = {
-  Dropdown,
-  Landing,
-  Slider,
-  Navbar,
-  Value,
-  Clients,
-  Help,
-  Team,
-  Portfolio,
-};
+import Clients from "./sections/Clients";
+import Help from "./sections/Help";
+import Landing from "./sections/Landing";
+import Team from "./sections/Our-team";
+import Portfolio from "./sections/Portfolio";
+import Value from "./sections/Value";
 
 export {
   Dropdown,

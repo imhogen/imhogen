@@ -9,7 +9,7 @@ import {
   redhat,
   machina,
 } from "./components/exports";
-import Footer from "./components/footer/footer";
+import Footer from "./components/footer/Footer";
 interface RootLayoutProps {
   children: React.ReactNode;
   hideNavAndFooter?: boolean;
@@ -26,7 +26,7 @@ export default function RootLayout({
 }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`  `}>
+      <body className={`${redhat.variable} ${machina.variable}  `}>
         {/* {!hideNavAndFooter && <Navbar />}
         {!hideNavAndFooter && <Dropdown />}
         {!hideNavAndFooter && <Slider />} */}

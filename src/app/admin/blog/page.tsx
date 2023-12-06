@@ -1,5 +1,5 @@
-import PostForm from "@/app/components/dashboard/post-form";
-import Tag from "@/app/components/dashboard/tags";
+import PostForm from "@/app/components/dashboard/Post-form";
+import Tag from "@/app/components/dashboard/Tags";
 import React from "react";
 
 const page = () => {

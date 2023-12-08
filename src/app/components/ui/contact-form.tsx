@@ -1,24 +1,69 @@
 "use client";
-import React, { useState } from "react";
 
-import { sendEmail } from "../../../../actions/send-email";
-
-export interface formValues {
-  firstname: string;
-  lastname: string;
-  email: string;
-  message: string;
-  file: string;
-}
+import { File } from "buffer";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [file, setFile] = useState<File>();
+  const [formValid, setFormValid] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!file) {
+      return "Please upload a file";
+    }
+
+    try {
+      const data = new FormData();
+      data.set("firstname", firstname);
+      data.set("lastname", lastname);
+      data.set("email", email);
+      data.set("message", message);
+      data.set("file", file as Blob);
+      setLoading(true);
+
+      const res = await fetch("/api/send", {
+        method: "POST",
+        body: data,
+      });
+
+      if (!res.ok) throw new Error(await res.text());
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  //get form data on target
+  const handleFileUpload = (e: any) => {
+    setFile(e.target.files?.[0]);
+  };
+
+  const handleFirstnameChange = (e: any) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleEmailChange = (e: any) => {
+    setEmail(e.target.value);
+  };
+
+  const handleLastnameChange = (e: any) => {
+    setLastName(e.target.value);
+  };
+
+  const handleMessageChange = (e: any) => {
+    setMessage(e.target.value);
+  };
+
   return (
     <>
       <form
         className="w-full md:w-4/5 lg:w-2/5 text-white flex flex-col mx-auto md:mx-0"
-        action={async (formData) => {
-          await sendEmail(formData);
-        }}
+        onSubmit={handleSubmit}
       >
         <h1 className="text-white">Send us a message</h1>
 
@@ -28,12 +73,14 @@ const ContactForm = () => {
             type="text"
             placeholder="firstname"
             className="input-field"
+            onChange={handleFirstnameChange}
           />
           <input
             name="lastname"
             type="text"
             placeholder="lastname"
             className="input-field"
+            onChange={handleLastnameChange}
           />
         </div>
         <input
@@ -41,6 +88,7 @@ const ContactForm = () => {
           name="email"
           placeholder="email"
           className="w-full bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm"
+          onChange={handleEmailChange}
         />
         <div className="rounded-lg border-gray-100 border border-opacity-30 my-2 flex flex-col ">
           <textarea
@@ -49,6 +97,7 @@ const ContactForm = () => {
             rows={5}
             className="bg-transparent w-full outline-none resize-none flex  text-sm p-2"
             placeholder="type your message here"
+            onChange={handleMessageChange}
           />
           <div className="flex items-center space-x-2">
             <label
@@ -77,7 +126,8 @@ const ContactForm = () => {
               type="file"
               id="fileInput"
               name="file"
-              className="hidden" // Hide the actual input field
+              className="hidden"
+              onChange={handleFileUpload}
             />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../cards/Card-1";
+import Card from "../cards/card-1";
 
 export default function Value() {
   return (

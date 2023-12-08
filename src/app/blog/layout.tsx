@@ -1,8 +1,9 @@
-import Tabs from "../components/blog/Blog-tabs";
+
+import Tabs from "../components/blog/blog-tabs";
 import { machina, redhat } from "../components/exports";
-import Navbar from "../components/navigation/Desktop-navigation";
-import Slider from "../components/navigation/Tablet-navigation";
+import Navbar from "../components/navigation/desktop-navigation";
 import Dropdown from "../components/navigation/mobile-navigation";
+import Slider from "../components/navigation/tablet-navigation";
 
 import Hero from "../components/ui/hero";
 import { Shell } from "../components/ui/shell";

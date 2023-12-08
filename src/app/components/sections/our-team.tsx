@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../cards/Card-4";
+
 import { machina } from "../exports";
+import Card from "../cards/card-4";
 
 export default function Team() {
   return (

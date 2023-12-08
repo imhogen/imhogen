@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../cards/Card-2";
+
 import { machina } from "../exports";
+import Card from "../cards/card-2";
 
 export default function Portfolio() {
   return (

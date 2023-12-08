@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../cards/Card-3";
+import Card from "../cards/card-3";
 
 export default function Help() {
   return (

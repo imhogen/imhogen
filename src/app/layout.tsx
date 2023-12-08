@@ -1,9 +1,8 @@
-// import { useMediaQuery } from "react-responsive";
 import type { Metadata } from "next";
 
 import "./globals.css";
 
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/footer";
 import { redhat, machina } from "./components/exports";
 interface RootLayoutProps {
   children: React.ReactNode;

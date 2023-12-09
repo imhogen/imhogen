@@ -6,10 +6,7 @@ import { client } from "../../../../content/mapped-content";
 
 export default function Clients() {
   return (
-    <div
-      className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex py-20"
-      style={machina.style}
-    >
+    <div className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex py-20 font-machina">
       <div className="text-center sub-heading leading-tight">
         <span className="text-white  ">Some </span>
         <span className="imho-gradient-text-to-r  ">Clients</span>
@@ -29,7 +26,6 @@ export default function Clients() {
                 width={200}
                 height={200}
                 className="opacity-80"
-                layout="responsive"
               />
             </div>
           ))}

@@ -2,7 +2,6 @@ import React from "react";
 
 import Image from "next/image";
 import texts from "../../../../content/text-content";
-import { machina, redhat } from "../exports";
 
 export default function Landing() {
   return (
@@ -15,8 +14,7 @@ export default function Landing() {
         <article className="flex-col justify-center gap-4 flex">
           <div
             className=" lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
-                         lg:leading-tight font-extrabold leading-[30px] "
-            style={machina.style}
+                         lg:leading-tight font-extrabold leading-[30px] font-machina"
           >
             <span className="text-white ">We</span>{" "}
             <span className="imho-gradient-text-to-b">Design</span>
@@ -24,10 +22,7 @@ export default function Landing() {
             <span className="imho-gradient-text-to-r ">Products</span>
             <span className="text-white"> & Processes</span>
           </div>
-          <div
-            className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home"
-            style={redhat.style}
-          >
+          <div className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home font-redhat">
             {texts.home}
           </div>
         </article>
@@ -36,7 +31,6 @@ export default function Landing() {
           <Image
             src="/images/pile.webp"
             alt="hero-image"
-            layout="responsive"
             priority // we may eventually use a loading skeleton for this(depends on what is best)
             height={1084}
             width={650}
@@ -48,7 +42,6 @@ export default function Landing() {
           <Image
             src="/images/hero-image-md.webp"
             alt="hero-image"
-            layout="responsive"
             priority
             height={1084}
             width={650}

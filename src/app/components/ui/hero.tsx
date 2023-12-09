@@ -7,7 +7,7 @@ const hero = () => {
     <div>
       <div
         style={machina.style}
-        className="relative top-[6rem] flex flex-col gap-5 "
+        className="relative top-12 lg:top-[6rem] flex flex-col gap-5 "
       >
         <div className="mx-auto">
           <span className="text-white sub-heading font-extrabold leading-10">

@@ -13,16 +13,10 @@ export default function Card() {
             <img src={item.customIcon} width={200} height={200} alt="icon" />
           </div>
           <div className="flex flex-col gap-5 px-4">
-            <h1
-              className="title-white-card text-center lg:text-left "
-              style={machina.style}
-            >
+            <h1 className="title-white-card text-center lg:text-left font-machina">
               {item.title}
             </h1>
-            <p
-              className="  descriptive-text-white-card text-center lg:text-left"
-              style={redhat.style}
-            >
+            <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
               {item.descriptiveText}
             </p>
           </div>

@@ -41,9 +41,13 @@ export interface navLinkProps {
   href: string;
 }
 
-export interface blogPostsProps {
-  src: string;
-  title: string;
-  description: string;
+// //this particular interface was for the dummy data and would be taken off soon
+
+export interface SocialMediaProps {
   link: string;
+  path: string;
+  linkrect: boolean;
+  linkcircle: boolean;
+  instarect: boolean;
+  instaline: boolean;
 }

@@ -1,12 +1,10 @@
 import React from "react";
 import Card from "../cards/card-3";
-import { machina } from "../exports";
 
 export default function Help() {
   return (
     <div
-      className="w-full text-center py-20 flex flex-col gap-10"
-      style={machina.style}
+      className="w-full text-center py-20 flex flex-col gap-10 font-machina"
       id="value"
     >
       <div className="sub-heading leading-tight ">

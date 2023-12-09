@@ -1,15 +1,9 @@
-// import { useMediaQuery } from "react-responsive";
 import type { Metadata } from "next";
 
 import "./globals.css";
-import {
-  Navbar,
-  Slider,
-  Dropdown,
-  redhat,
-  machina,
-} from "./components/exports";
+
 import Footer from "./components/footer/footer";
+import { redhat, machina } from "./components/exports";
 interface RootLayoutProps {
   children: React.ReactNode;
   hideNavAndFooter?: boolean;
@@ -26,7 +20,7 @@ export default function RootLayout({
 }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={` ${redhat.variable} `}>
+      <body className={`${redhat.variable} ${machina.variable}  `}>
         {/* {!hideNavAndFooter && <Navbar />}
         {!hideNavAndFooter && <Dropdown />}
         {!hideNavAndFooter && <Slider />} */}

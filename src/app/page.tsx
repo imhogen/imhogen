@@ -1,16 +1,16 @@
-import {
-  Landing,
-  Portfolio,
-  Value,
-  Clients,
-  Help,
-  Team,
-  Dropdown,
-  Navbar,
-  Slider,
-} from "./components/exports";
+import Navbar from "./components/navigation/desktop-navigation";
+import Slider from "./components/navigation/tablet-navigation";
+
+import Dropdown from "./components/navigation/mobile-navigation";
+import Clients from "./components/sections/clients";
+import Help from "./components/sections/help";
 import Process from "./components/sections/imho-process";
+import Team from "./components/sections/our-team";
+import Portfolio from "./components/sections/portfolio";
+import Value from "./components/sections/value";
+
 import { Shell } from "./components/ui/shell";
+import Landing from "./components/sections/landing";
 export default function Home() {
   return (
     <main

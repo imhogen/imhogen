@@ -1,40 +1,4 @@
-import localFont from "@next/font/local";
-import Navbar from "./navigation/desktop-navigation";
-import Dropdown from "./navigation/mobile-navigation";
-import Slider from "./navigation/tablet-navigation";
-import Landing from "./sections/landing";
-import Value from "./sections/value";
-import Clients from "./sections/clients";
-import Portfolio from "./sections/portfolio";
-
-import Help from "./sections/help";
-import Team from "./sections/our-team";
-import { navLinks } from "../../../content/mapped-content";
-
-const exports = {
-  Dropdown,
-  Landing,
-  Slider,
-  Navbar,
-  Value,
-  Clients,
-  Help,
-  Team,
-  Portfolio,
-};
-
-export {
-  Dropdown,
-  Landing,
-  Slider,
-  Navbar,
-  Value,
-  Portfolio,
-  Clients,
-  Help,
-  Team,
-  
-};
+import localFont from "next/font/local";
 
 export const machina = localFont({
   src: "../../../public/fonts/NeueMachina-Ultrabold.otf",

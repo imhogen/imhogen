@@ -62,9 +62,8 @@ function Slider() {
                     </Link>
                   ))}
                   <div className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center gap-2.5 flex ">
-                    {/* TODO: make contact button functional */}
                     <Link
-                      href="/"
+                      href="#contact"
                       className="text-white text-sm font-semibold leading-tight"
                     >
                       Contact

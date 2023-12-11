@@ -9,7 +9,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [file, setFile] = useState<File>();
-  const [formValid, setFormValid] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,18 +25,29 @@ const ContactForm = () => {
       data.set("email", email);
       data.set("message", message);
       data.set("file", file as Blob);
-      setLoading(true);
 
       const res = await fetch("/api/send", {
         method: "POST",
-        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((data) => {
+        console.log(data);
+        setLoading(false);
       });
-
-      if (!res.ok) throw new Error(await res.text());
     } catch (err) {
       console.error(err);
     }
+
+    setFirstName(" ");
+    setLastName(" ");
+    setEmail(" ");
+    setMessage(" ");
+    setFile(undefined);
   };
+
+  // gonna have to work on this latter
 
   //get form data on target
   const handleFileUpload = (e: any) => {
@@ -74,6 +85,8 @@ const ContactForm = () => {
             placeholder="firstname"
             className="input-field"
             onChange={handleFirstnameChange}
+            value={firstname}
+            required
           />
           <input
             name="lastname"
@@ -81,6 +94,8 @@ const ContactForm = () => {
             placeholder="lastname"
             className="input-field"
             onChange={handleLastnameChange}
+            required
+            value={lastname}
           />
         </div>
         <input
@@ -89,6 +104,8 @@ const ContactForm = () => {
           placeholder="email"
           className="w-full bg-transparent p-2 border-gray-100 border border-opacity-30 rounded-lg text-sm"
           onChange={handleEmailChange}
+          value={email}
+          required
         />
         <div className="rounded-lg border-gray-100 border border-opacity-30 my-2 flex flex-col ">
           <textarea
@@ -98,6 +115,8 @@ const ContactForm = () => {
             className="bg-transparent w-full outline-none resize-none flex  text-sm p-2"
             placeholder="type your message here"
             onChange={handleMessageChange}
+            value={message}
+            required
           />
           <div className="flex items-center space-x-2">
             <label
@@ -134,8 +153,11 @@ const ContactForm = () => {
         <button
           type="submit"
           className="w-full h-9 px-4 py-2 bg-[#EF7D00] rounded-lg justify-center items-center gap-2.5 inline-flex"
+          onClick={() => {
+            setLoading(true);
+          }}
         >
-          Send Message
+          {loading === true ? "Sending..." : "Send Message"}
         </button>
       </form>
       {/* Thank you message. Displays if form is submitted and is valid

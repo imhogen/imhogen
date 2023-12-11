@@ -51,3 +51,16 @@ export interface SocialMediaProps {
   instarect: boolean;
   instaline: boolean;
 }
+
+export interface BlogPost {
+  title: string;
+  overview: string;
+  image: string;
+  content: any;
+  _id: string;
+  slug: {
+    current: string;
+  };
+  _createdAt: string;
+  imageUrl: string;
+}

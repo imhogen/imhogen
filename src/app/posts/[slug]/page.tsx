@@ -35,13 +35,13 @@ function estimateReadingTime(text: string) {
   const minutes = numberOfWords / wordsPerMinute;
   return Math.ceil(minutes); // rounds up to the nearest minute
 }
-export const Posts = async ({
+export default async function Posts({
   params,
 }: {
   params: {
     slug: string;
   };
-}) => {
+}) {
   const data = (await getPostDetails(params.slug)) as BlogPost;
   console.log("working out actually and i am very excited");
   return (
@@ -99,6 +99,4 @@ export const Posts = async ({
       </Shell>
     </main>
   );
-};
-
-export default Posts;
+}

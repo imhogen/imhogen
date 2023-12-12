@@ -56,6 +56,7 @@ export interface BlogPost {
   title: string;
   overview: string;
   image: string;
+  author: string;
   content: any;
   _id: string;
   slug: {

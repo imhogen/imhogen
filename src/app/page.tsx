@@ -21,7 +21,7 @@ export default function Home() {
       <Dropdown />
       <Slider />
       {/* Home */}
-      <Shell className="Shell relative lg:top-0 gap-10 lg:gap-36  ">
+      <Shell className=" relative lg:top-0 gap-10 lg:gap-36  ">
         <Landing />
         <Value />
         <Clients />

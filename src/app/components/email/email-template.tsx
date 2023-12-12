@@ -33,8 +33,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       <Head />
       <Preview>Message from contact form</Preview>
       <Tailwind>
-        <Body className="bg-gray-950 w-1/2  my-auto p-5 ">
-          <Container className="">
+        <Body className="bg-white w-full  my-auto p-5 ">
+          <Container className="w-full">
             <Section className="mt-[32px]">
               <Img
                 src={`https://imhogen.com/assests/imhologo.png`}

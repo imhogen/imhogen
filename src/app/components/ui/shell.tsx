@@ -7,7 +7,7 @@ const Shell: React.FC<ShellProps> = ({ children, className }: ShellProps) => {
   return (
     <div
       className={cn(
-        "flex flex-col relative w-11/12  gap-20 items-center py-10 ",
+        "flex flex-col relative w-11/12  gap-20 items-center py-10  ",
         className
       )}
     >

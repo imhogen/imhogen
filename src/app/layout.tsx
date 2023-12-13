@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Footer from "./components/footer/footer";
-import { redhat, machina } from "./components/exports";
+import { redhat, machina, calligraffitti } from "./components/exports";
 interface RootLayoutProps {
   children: React.ReactNode;
   hideNavAndFooter?: boolean;
@@ -20,7 +20,9 @@ export default function RootLayout({
 }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${redhat.variable} ${machina.variable}  `}>
+      <body
+        className={`${redhat.variable} ${machina.variable} ${calligraffitti.variable}  `}
+      >
         {/* {!hideNavAndFooter && <Navbar />}
         {!hideNavAndFooter && <Dropdown />}
         {!hideNavAndFooter && <Slider />} */}

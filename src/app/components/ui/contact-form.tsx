@@ -2,6 +2,8 @@
 
 import { File } from "buffer";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import Toast from "./toast";
 
 const ContactForm = () => {
   const [firstname, setFirstName] = useState("");
@@ -11,12 +13,8 @@ const ContactForm = () => {
   const [file, setFile] = useState<File>();
 
   const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!file) {
-      return "Please upload a file";
-    }
 
     try {
       const data = new FormData();
@@ -24,27 +22,36 @@ const ContactForm = () => {
       data.set("lastname", lastname);
       data.set("email", email);
       data.set("message", message);
-      data.set("file", file as Blob);
-
-      const res = await fetch("/api/send", {
+      file ? data.set("file", file as Blob) : null;
+      await fetch("/api/send", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).then((data) => {
-        console.log(data);
-        setLoading(false);
-      });
+        body: data,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setLoading(false);
+          toast.success("success.");
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+          toast.error(
+            "An error occurred, please check your internet connectivity and try again "
+          );
+        });
     } catch (err) {
-      console.error(err);
+      console.log(err);
+      setLoading(false);
+      toast.error("An error occurred, please tring again ");
     }
 
-    setFirstName(" ");
-    setLastName(" ");
-    setEmail(" ");
-    setMessage(" ");
-    setFile(undefined);
+    // Clear the form
+    setFirstName("");
+
+    setEmail("");
+    setMessage("");
+    setLastName("");
   };
 
   // gonna have to work on this latter
@@ -72,6 +79,7 @@ const ContactForm = () => {
 
   return (
     <>
+      <Toast />
       <form
         className="w-full md:w-4/5 lg:w-2/5 text-white flex flex-col mx-auto md:mx-0"
         onSubmit={handleSubmit}
@@ -157,7 +165,7 @@ const ContactForm = () => {
             setLoading(true);
           }}
         >
-          {loading === true ? "Sending..." : "Send Message"}
+          {loading === false ? "Send Message" : "Sending..."}
         </button>
       </form>
       {/* Thank you message. Displays if form is submitted and is valid

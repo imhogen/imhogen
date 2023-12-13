@@ -11,9 +11,9 @@ const ContactForm = () => {
   const [file, setFile] = useState<File>();
 
   const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
+    // Check if form is valid
     if (!file) {
       return "Please upload a file";
     }
@@ -25,27 +25,30 @@ const ContactForm = () => {
       data.set("email", email);
       data.set("message", message);
       data.set("file", file as Blob);
-
-      const res = await fetch("/api/send", {
+      await fetch("/api/send", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).then((data) => {
-        console.log(data);
-        setLoading(false);
-      });
+        body: data,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } catch (err) {
-      console.error(err);
+      console.log(err);
     }
 
-    setFirstName(" ");
-    setLastName(" ");
-    setEmail(" ");
-    setMessage(" ");
-    setFile(undefined);
+    // Clear the form
+    setFirstName("");
+
+    setEmail("");
+    setMessage("");
+    setLastName("");
   };
+  console.log(firstname, file);
 
   // gonna have to work on this latter
 

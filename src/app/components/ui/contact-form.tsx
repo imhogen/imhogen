@@ -2,6 +2,8 @@
 
 import { File } from "buffer";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import Toast from "./toast";
 
 const ContactForm = () => {
   const [firstname, setFirstName] = useState("");
@@ -13,10 +15,6 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Check if form is valid
-    if (!file) {
-      return "Please upload a file";
-    }
 
     try {
       const data = new FormData();
@@ -24,7 +22,7 @@ const ContactForm = () => {
       data.set("lastname", lastname);
       data.set("email", email);
       data.set("message", message);
-      data.set("file", file as Blob);
+      file ? data.set("file", file as Blob) : null;
       await fetch("/api/send", {
         method: "POST",
         body: data,
@@ -33,12 +31,19 @@ const ContactForm = () => {
         .then((data) => {
           console.log(data);
           setLoading(false);
+          toast.success("success.");
         })
         .catch((err) => {
           console.log(err);
+          setLoading(false);
+          toast.error(
+            "An error occurred, please check your internet connectivity and try again "
+          );
         });
     } catch (err) {
       console.log(err);
+      setLoading(false);
+      toast.error("An error occurred, please tring again ");
     }
 
     // Clear the form
@@ -48,7 +53,6 @@ const ContactForm = () => {
     setMessage("");
     setLastName("");
   };
-  console.log(firstname, file);
 
   // gonna have to work on this latter
 
@@ -75,6 +79,7 @@ const ContactForm = () => {
 
   return (
     <>
+      <Toast />
       <form
         className="w-full md:w-4/5 lg:w-2/5 text-white flex flex-col mx-auto md:mx-0"
         onSubmit={handleSubmit}
@@ -160,7 +165,7 @@ const ContactForm = () => {
             setLoading(true);
           }}
         >
-          {loading === true ? "Sending..." : "Send Message"}
+          {loading === false ? "Send Message" : "Sending..."}
         </button>
       </form>
       {/* Thank you message. Displays if form is submitted and is valid

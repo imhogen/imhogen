@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../cards/card-1";
+import Motion, { childVariants } from "@/app/framer";
 
 export default function Value() {
   return (
@@ -10,6 +11,7 @@ export default function Value() {
         <span className="text-white "> and Where We </span>
         <span className="imho-gradient-text-to-b  ">Excel</span>
       </div>
+
       {/* our value and where we excel  cards  */}
 
       <Card />

@@ -1,3 +1,4 @@
+import Motion, { childVariants } from "@/app/framer";
 import { help } from "../../../../content/mapped-content";
 import { machina, redhat } from "../exports";
 
@@ -12,14 +13,17 @@ export default function Card() {
           <div className="w-36 relative  ">
             <img src={item.customIcon} width={200} height={200} alt="icon" />
           </div>
-          <div className="flex flex-col gap-5 px-4">
-            <h1 className="title-white-card text-center lg:text-left font-machina">
-              {item.title}
-            </h1>
-            <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
-              {item.descriptiveText}
-            </p>
-          </div>
+          <Motion childVariants={childVariants}>
+            <div className="flex flex-col gap-5 px-4">
+              <h1 className="title-white-card text-center lg:text-left font-machina">
+                {item.title}
+              </h1>
+
+              <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
+                {item.descriptiveText}
+              </p>
+            </div>
+          </Motion>
         </div>
       ))}
     </div>

@@ -1,3 +1,4 @@
+import Motion, { childVariants } from "@/app/framer";
 import Image from "next/image";
 import React from "react";
 
@@ -19,12 +20,14 @@ export default function Process() {
             className="w-full flex items-center justify-center lg:w-4/5 mx-auto pb-2"
             style={{ paddingTop: "0%" }}
           >
-            <Image
-              src="/images/imho_process.webp"
-              alt="imho's process"
-              width={650}
-              height={650}
-            />
+            <Motion childVariants={childVariants}>
+              <Image
+                src="/images/imho_process.webp"
+                alt="imho's process"
+                width={650}
+                height={650}
+              />
+            </Motion>
           </div>
         </div>
       </div>

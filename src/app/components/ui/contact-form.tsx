@@ -162,7 +162,7 @@ const ContactForm = () => {
           type="submit"
           className="w-full h-9 px-4 py-2 bg-[#EF7D00] rounded-lg justify-center items-center gap-2.5 inline-flex"
           onClick={() => {
-            setLoading(true);
+            message && firstname && lastname ? setLoading(true) : null;
           }}
         >
           {loading === false ? "Send Message" : "Sending..."}

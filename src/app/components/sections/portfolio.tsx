@@ -2,6 +2,7 @@ import React from "react";
 
 import { machina } from "../exports";
 import Card from "../cards/card-2";
+import Motion, { childVariants } from "@/app/framer";
 
 export default function Portfolio() {
   return (

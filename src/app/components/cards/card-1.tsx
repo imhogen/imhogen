@@ -1,6 +1,7 @@
 import { machina, redhat } from "../exports";
 import { value } from "../../../../content/mapped-content";
 import Image from "next/image";
+import Motion, { childVariants } from "@/app/framer";
 
 export default function Card() {
   return (
@@ -10,17 +11,20 @@ export default function Card() {
           key={index}
           className=" background-white-card w-full  h-full  flex-col  items-center  inline-flex"
         >
-          <div className="w-36 relative">
-            <Image src={item.src} width={200} height={200} alt="icon" />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h1 className="title-white-card text-center lg:text-left font-machina ">
-              {item.title}
-            </h1>
-            <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
-              {item.description}
-            </p>
-          </div>
+          {" "}
+          <Motion childVariants={childVariants}>
+            <div className="w-36 relative">
+              <Image src={item.src} width={200} height={200} alt="icon" />
+            </div>
+            <div className="flex flex-col gap-5">
+              <h1 className="title-white-card text-center lg:text-left font-machina ">
+                {item.title}
+              </h1>
+              <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
+                {item.description}
+              </p>
+            </div>
+          </Motion>
         </div>
       ))}
     </div>

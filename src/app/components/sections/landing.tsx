@@ -2,6 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 import texts from "../../../../content/text-content";
+import Motion, { childVariants } from "@/app/framer";
 
 export default function Landing() {
   return (
@@ -22,10 +23,13 @@ export default function Landing() {
             <span className="imho-gradient-text-to-r ">Products</span>
             <span className="text-white"> & Processes</span>
           </div>
-          <div className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home font-redhat">
-            {texts.home}
-          </div>
+          <Motion childVariants={childVariants}>
+            <div className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home font-redhat">
+              {texts.home}
+            </div>
+          </Motion>
         </article>
+
         {/* image for desktop */}
         <div className="w-full max-w-full  justify-center  hidden lg:flex ">
           <Image

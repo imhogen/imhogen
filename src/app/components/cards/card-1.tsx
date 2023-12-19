@@ -12,10 +12,10 @@ export default function Card() {
           className=" background-white-card w-full  h-full  flex-col  items-center  inline-flex"
         >
           {" "}
+          <div className="w-36 relative">
+            <Image src={item.src} width={200} height={200} alt="icon" />
+          </div>
           <Motion childVariants={childVariants}>
-            <div className="w-36 relative">
-              <Image src={item.src} width={200} height={200} alt="icon" />
-            </div>
             <div className="flex flex-col gap-5">
               <h1 className="title-white-card text-center lg:text-left font-machina ">
                 {item.title}

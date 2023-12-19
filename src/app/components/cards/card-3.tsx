@@ -1,6 +1,5 @@
 import Motion, { childVariants } from "@/app/framer";
 import { help } from "../../../../content/mapped-content";
-import { machina, redhat } from "../exports";
 
 export default function Card() {
   return (
@@ -10,7 +9,7 @@ export default function Card() {
           key={index}
           className=" background-white-card h-full  lg:w-full  flex-col  items-center lg:justify-around lg:items-start inline-flex px-4"
         >
-          <div className="w-36 relative  ">
+          <div className="w-36 relative">
             <img src={item.customIcon} width={200} height={200} alt="icon" />
           </div>
           <Motion childVariants={childVariants}>

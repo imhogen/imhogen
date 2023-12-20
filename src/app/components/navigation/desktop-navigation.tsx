@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { navLinks } from "../../../../content/mapped-content";
+import { redhat } from "../exports";
 
 function Navbar() {
   return (
@@ -25,16 +26,16 @@ function Navbar() {
             <Link
               key={index}
               href={link.href}
-              className="text-white text-opacity-60 text-base font-light 
+              className={`text-white text-opacity-60 text-base font-light 
                        leading-normal hover:text-opacity-80
-                        transition duration-2000 ease"
+                        transition duration-2000 ease ${redhat.className}`}
             >
               {link.link}
             </Link>
           ))}
           <div
-            className="px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center 
-                      gap-2.5 flex text-white text-base font-normal "
+            className={`px-4 py-2 bg-[#ef7d00] rounded-md justify-center items-center 
+                      gap-2.5 flex text-white text-base font-normal ${redhat.className} `}
           >
             <Link href="#contact">Contact</Link>
           </div>

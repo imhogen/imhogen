@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import ContactForm from "../ui/contact-form";
 import { socialMedia } from "../../../../content/mapped-content";
+import { calligraffitti, machina, redhat } from "../exports";
 const Footer = () => {
   return (
     <footer
@@ -13,7 +14,9 @@ const Footer = () => {
       id="contact"
     >
       {/* medium and large screens only */}
-      <div className=" md:flex justify-between w-full items-center hidden font-redhat">
+      <div
+        className={`${redhat.className} md:flex justify-between w-full items-center hidden`}
+      >
         <div className="text-white text-sm">
           KBI KNUST, Commercial Area
           <br />
@@ -39,11 +42,15 @@ const Footer = () => {
           </Link>
           <div>
             <span>
-              <p className="text-white text-md md:text-2xl leading-5 font-machina ">
+              <p
+                className={`text-white text-md md:text-2xl leading-5 ${machina.className}`}
+              >
                 Innovate <br /> Make and <br /> Have Ours <br />
                 LTD.
               </p>
-              <p className="text-white text-sm pt-2 font-calligraffitti">
+              <p
+                className={`text-white text-sm pt-2 font-calligraffitti ${calligraffitti.className}`}
+              >
                 Make it real
               </p>
             </span>
@@ -51,7 +58,9 @@ const Footer = () => {
         </div>
 
         {/* mobile devices only */}
-        <div className="flex flex-col text-center justify-between w-full items-center md:hidden font-redhat">
+        <div
+          className={`flex flex-col text-center justify-between w-full items-center md:hidden ${redhat.className}`}
+        >
           <div className="text-white text-sm">
             KBI KNUST, Commercial Area
             <br />
@@ -66,7 +75,7 @@ const Footer = () => {
         </div>
         <div className="h-[1px] w-full bg-gray-200 bg-opacity-20 md:hidden"></div>
 
-        <div className="flex justify-between w-full  md:justify-end font-redhat">
+        <div className="flex justify-between w-full  md:justify-end ">
           {/* contact form */}
           <ContactForm />
         </div>
@@ -74,7 +83,9 @@ const Footer = () => {
 
       <div className="h-[1px] w-full   bg-gray-200 bg-opacity-20"></div>
       <div className="w-full flex flex-col justify-between items-center gap-3">
-        <div className="text-white text-opacity-70 text-sm leading-[21px] font-redhat">
+        <div
+          className={`text-white text-opacity-70 text-sm leading-[21px] ${redhat.className}`}
+        >
           &copy; 2023 IMHO. All rights reserved.
         </div>
         <div className="justify-start items-center gap-5 flex">

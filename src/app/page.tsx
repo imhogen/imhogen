@@ -17,9 +17,6 @@ export default function Home() {
       className="flex min-h-screen flex-col justify-center items-center overflow-x-hidden overflow-y-hidden
                   max-w-full mx-auto "
     >
-      <Navbar />
-      <Dropdown />
-      <Slider />
       {/* Home */}
       <Shell className=" relative lg:top-0 gap-10 lg:gap-36  ">
         <Landing />

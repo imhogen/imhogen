@@ -17,17 +17,27 @@ export default function Card() {
         >
           {/* text */}
 
-          <div className="flex flex-col w-full md:w-11/12 lg:w-2/5  text-center md:text-left gap-5">
+          <div
+            className={`flex flex-col w-full md:w-11/12 lg:w-2/5  text-center md:text-left gap-5`}
+          >
             <Motion childVariants={childVariants}>
-              <h1 className="text-lg font-bold lg:text-xl text-white opacity-80 ">
-                {item.count}
-              </h1>
-              <h1 className="text-lg  font-bold lg:text-xl text-white opacity-80 ">
-                {item.title}
-              </h1>
-              <p className="descriptive-text-portfolio text-center md:text-left">
-                {item.description}
-              </p>
+              <div className="flex flex-col gap-5">
+                <h1
+                  className={`text-lg font-bold lg:text-xl text-white opacity-80 ${machina.className} `}
+                >
+                  {item.count}
+                </h1>
+                <h1
+                  className={`text-lg  font-bold lg:text-xl text-white opacity-80 ${machina.className}`}
+                >
+                  {item.title}
+                </h1>
+                <p
+                  className={`descriptive-text-portfolio text-center md:text-left ${redhat.className}`}
+                >
+                  {item.description}
+                </p>
+              </div>
             </Motion>
           </div>
 

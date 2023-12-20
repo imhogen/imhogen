@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { team } from "../../../../content/mapped-content";
 import Motion, { childVariants } from "@/app/framer";
+import { machina, redhat } from "../exports";
 
 export default function Card() {
   return (
@@ -19,12 +20,18 @@ export default function Card() {
 
           <div className="flex flex-col md:w-11/12 lg:w-2/5 gap-5">
             <Motion childVariants={childVariants}>
-              <h1 className="text-lg text-center md:text-left font-bold lg:text-xl text-white opacity-80 ">
-                {item.title}
-              </h1>
-              <p className="descriptive-text-portfolio text-center md:text-left ">
-                {item.description}
-              </p>
+              <div className="flex flex-col gap-5">
+                <h1
+                  className={`text-lg text-center md:text-left font-bold lg:text-xl text-white opacity-80 ${machina.className}`}
+                >
+                  {item.title}
+                </h1>
+                <p
+                  className={`descriptive-text-portfolio text-center md:text-left ${redhat.className}`}
+                >
+                  {item.description}
+                </p>
+              </div>
             </Motion>
           </div>
 

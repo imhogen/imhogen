@@ -7,7 +7,9 @@ import Motion, { childVariants } from "@/app/framer";
 
 export default function Clients() {
   return (
-    <div className="w-full flex-col justify-center items-center gap-10 lg:gap-20 flex py-20 font-machina">
+    <div
+      className={`w-full flex-col justify-center items-center gap-10 lg:gap-20 flex py-20 ${machina.className}`}
+    >
       <div className="text-center sub-heading leading-tight">
         <span className="text-white  ">Some </span>
         <span className="imho-gradient-text-to-r  ">Clients</span>

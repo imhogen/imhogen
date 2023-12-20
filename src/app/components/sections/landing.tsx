@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import texts from "../../../../content/text-content";
 import Motion, { childVariants } from "@/app/framer";
+import { machina, redhat } from "../exports";
 
 export default function Landing() {
   return (
@@ -14,8 +15,8 @@ export default function Landing() {
       >
         <article className="flex-col justify-center gap-4 flex">
           <div
-            className=" lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
-                         lg:leading-tight font-extrabold leading-[30px] font-machina"
+            className={`lg:mr-10 text-center lg:text-left text-xl md:text-4xl lg:text-5xl 
+                         lg:leading-tight font-extrabold leading-[30px] ${machina.className} `}
           >
             <span className="text-white ">We</span>{" "}
             <span className="imho-gradient-text-to-b">Design</span>
@@ -24,7 +25,9 @@ export default function Landing() {
             <span className="text-white"> & Processes</span>
           </div>
           <Motion childVariants={childVariants}>
-            <div className=" md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home font-redhat">
+            <div
+              className={`md:w-5/6 mx-auto text-center lg:text-left lg:w-full descriptive-text-home ${redhat.className}`}
+            >
               {texts.home}
             </div>
           </Motion>

@@ -6,8 +6,7 @@ const hero = () => {
   return (
     <div>
       <div
-        style={machina.style}
-        className="relative top-12 lg:top-[6rem] flex flex-col gap-5 "
+        className={` lg:top-[6rem] flex flex-col gap-5 ${machina.className} `}
       >
         <div className="mx-auto">
           <span className="text-white sub-heading font-extrabold leading-10">

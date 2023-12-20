@@ -9,13 +9,13 @@ export default function Team() {
       className="  w-full h-fit flex-col  justify-center items-center gap-10 flex pt-10 pb-20"
       id="team"
     >
-      <section className="text-white text-center sub-heading font-bold leading-tight font-machina">
+      <section
+        className={`text-white text-center sub-heading font-bold leading-tight ${machina.className}`}
+      >
         Our <span className="imho-gradient-text-to-r">Team</span>
       </section>
 
-      <section className="font-redhat">
-        <Card />
-      </section>
+      <Card />
     </div>
   );
 }

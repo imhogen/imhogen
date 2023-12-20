@@ -17,10 +17,14 @@ export default function Card() {
           </div>
           <Motion childVariants={childVariants}>
             <div className="flex flex-col gap-5">
-              <h1 className="title-white-card text-center lg:text-left font-machina ">
+              <h1
+                className={`title-white-card text-center lg:text-left ${machina.className}`}
+              >
                 {item.title}
               </h1>
-              <p className="  descriptive-text-white-card text-center lg:text-left font-redhat">
+              <p
+                className={`descriptive-text-white-card text-center lg:text-left ${redhat.className}`}
+              >
                 {item.description}
               </p>
             </div>

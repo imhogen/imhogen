@@ -4,6 +4,9 @@ import { BlogPost } from "../../../Types";
 import Link from "next/link";
 import Image from "next/image";
 import Motion, { childVariants } from "../framer";
+import Hero from "../components/ui/hero";
+import { Shell } from "../components/ui/shell";
+import { machina, redhat } from "../components/exports";
 
 async function getProjects() {
   const query = `*[_type == "blog"]{
@@ -29,13 +32,17 @@ export default async function page() {
       : "this is where you get to know about my weakness"
   );
   return (
-    <div className="w-full">
+    <Shell
+      className="flex min-h-screen flex-col  justify-center items-center  relative top-20 overflow-x-hidden overflow-y-hidden
+    max-w-full mx-auto "
+    >
+      <Hero />
       <Motion childVariants={childVariants}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-10 ">
           {data.map((posts) => (
             <article
               key={posts._id}
-              className="w-full flex-1 p-2 h-fit   bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex font-redhat"
+              className={`w-full flex-1 p-3 h-fit   bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
             >
               <Image
                 className=" h-fit rounded-lg w-full"
@@ -46,7 +53,9 @@ export default async function page() {
               />
               <div className="  flex-col justify-center items-start gap-2 flex">
                 <Link href={`/posts/${posts.slug.current}`} prefetch>
-                  <div className=" text-black text-lg font-extrabold leading-snug font-machina line-clamp-2">
+                  <div
+                    className={` text-black text-lg font-extrabold leading-snug line-clamp-2 ${machina.className}`}
+                  >
                     {posts.title}
                   </div>
                 </Link>
@@ -57,9 +66,9 @@ export default async function page() {
               </div>
               <div className="py-2 rounded-md justify-center items-center gap-2.5 inline-flex">
                 <Link
-                  href={`/posts/`}
+                  href={`/posts/${posts.slug.current}`}
                   prefetch
-                  className="text-amber-600 text-base font-semibold  leading-tight font-redhat"
+                  className="text-amber-600 text-base font-semibold  leading-tight "
                 >
                   READ ME{" >"}
                 </Link>
@@ -69,6 +78,6 @@ export default async function page() {
           ))}
         </div>
       </Motion>
-    </div>
+    </Shell>
   );
 }

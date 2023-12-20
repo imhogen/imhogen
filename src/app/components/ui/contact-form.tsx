@@ -37,13 +37,15 @@ const ContactForm = () => {
           console.log(err);
           setLoading(false);
           toast.error(
-            "An error occurred, please check your internet connectivity and try again "
+            "oppps! there was a problem sending your message, try again in a few minutes"
           );
         });
     } catch (err) {
       console.log(err);
       setLoading(false);
-      toast.error("An error occurred, please tring again ");
+      toast.error(
+        "oppps! there was a problem sending your message, try again in a few minutes"
+      );
     }
 
     // Clear the form

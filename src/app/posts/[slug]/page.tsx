@@ -7,6 +7,7 @@ import { BlogPost } from "../../../../Types";
 import { Shell } from "@/app/components/ui/shell";
 import PortableText from "react-portable-text";
 import Image from "next/image";
+import { machina, redhat } from "@/app/components/exports";
 
 async function getPostDetails(slug: string) {
   // const query = `*[_type == "blog" && slug.current == "${slug}"][0]`;
@@ -49,12 +50,13 @@ export default async function Posts({
       className="flex h-full flex-col justify-center items-center overflow-x-hidden overflow-y-hidden
                 max-w-full mx-auto "
     >
-      <Navbar />
-      <Slider />
-      <Dropdown />
-      <Shell className=" relative top-12 h-full lg:min-h-screen lg:top-28 gap-10  ">
+      <Shell
+        className={` relative top-12 h-full lg:min-h-screen md:top-28 gap-10 ${redhat.className}`}
+      >
         <div className="flex flex-col gap-5 w-full h-full lg:min-h-screen lg:w-4/5  mx-auto">
-          <h1 className=" text-center text-xl md:text-3xl lg:text-5xl tracking-tight leading-relaxed text-gray-100 font-machina ">
+          <h1
+            className={` text-center text-xl md:text-3xl lg:text-5xl tracking-tight leading-relaxed text-gray-100 ${machina.className}`}
+          >
             {data.title}
           </h1>
 
@@ -80,9 +82,9 @@ export default async function Posts({
             </div>
           </div>
 
-          <article className="flex gap-10 h-full flex-col text-gray-500 text-md font-redhat ">
+          <article className="flex gap-10 min-h-screen flex-col text-gray-500 text-md">
             <Image
-              className=" mx-auto w-full rounded-lg "
+              className=" mx-auto w-full h-56 md:h-64 lg:h-96 rounded-lg "
               src={data.imageUrl}
               height={100}
               width={300}

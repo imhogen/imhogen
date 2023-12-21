@@ -13,24 +13,27 @@ export async function POST(request: Request) {
   const email = data.get("email");
   const message = data.get("message");
   const file: File | null = data.get("file") as unknown as File;
-  if (!file) {
-    return NextResponse.json({ success: false });
+  // if (!file) {
+  //   return NextResponse.json({ success: false });
+  // }
+
+  let buffer;
+
+  if (file) {
+    const bytes = await file.arrayBuffer();
+    buffer = Buffer.from(bytes);
+
+    const dir = join("/", "tmp");
+    if (!existsSync(dir)) {
+      mkdirSync(dir);
+    }
+
+    const path = join(dir, file.name);
+    await writeFile(path, buffer, (err) => {
+      if (err) throw err;
+      console.log(`open${path} to see the uploaded file`);
+    });
   }
-
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-
-  const dir = join("/", "tmp");
-  if (!existsSync(dir)) {
-    mkdirSync(dir);
-  }
-
-  const path = join(dir, file.name);
-  await writeFile(path, buffer, (err) => {
-    if (err) throw err;
-    console.log(`open${path} to see the uploaded file`);
-  });
-
   await resend.emails.send({
     from: "Contact form <onboarding@resend.dev>",
     to: "admin@imhogen.com",
@@ -42,7 +45,7 @@ export async function POST(request: Request) {
       email: email as string,
     }),
     reply_to: email as string,
-    attachments: [{ filename: file.name, content: buffer }],
+    attachments: file ? [{ filename: file.name, content: buffer }] : [],
   });
 
   return NextResponse.json({ success: true });

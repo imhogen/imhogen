@@ -50,10 +50,10 @@ const ContactForm = () => {
 
     // Clear the form
     setFirstName("");
-
     setEmail("");
     setMessage("");
     setLastName("");
+    setFile(undefined);
   };
 
   // gonna have to work on this latter
@@ -170,22 +170,6 @@ const ContactForm = () => {
           {loading === false ? "Send Message" : "Sending..."}
         </button>
       </form>
-      {/* Thank you message. Displays if form is submitted and is valid
-      <div className="mt-4">
-        <div
-          className={`bg-green-600 text-white px-10 py-5 rounded ${
-            formValid ? "block" : "hidden"
-          }`}
-        >
-          <div className="flex justify-between items-center">
-            <p>Thank you for your message!</p>
-            <FolderClosedIcon
-              className="cursor-pointer"
-              onClick={() => setFormValid(false)}
-            />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

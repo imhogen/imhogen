@@ -49,7 +49,7 @@ const Footer = () => {
                 LTD.
               </p>
               <p
-                className={`text-white text-sm pt-2 font-calligraffitti ${calligraffitti.className}`}
+                className={`text-white text-sm pt-2 ${calligraffitti.className}`}
               >
                 Make it real
               </p>

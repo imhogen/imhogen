@@ -38,17 +38,17 @@ export default async function page() {
     >
       <Hero />
       <Motion childVariants={childVariants}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-fit md:w-4/5 mx-auto gap-10 ">
           {data.map((posts) => (
             <article
               key={posts._id}
-              className={`w-full flex-1 p-3 h-fit   bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
+              className={`w-full flex-1 p-3 h-full bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
             >
               <Image
-                className=" h-fit rounded-lg w-full"
+                className="rounded-lg w-full h-64"
                 src={posts.imageUrl}
-                height={100}
-                width={300}
+                height={500}
+                width={500}
                 alt="blog-card-picture"
               />
               <div className="  flex-col justify-center items-start gap-2 flex">

@@ -20,9 +20,9 @@ const hero = () => {
           </span>
         </div>
 
-        {/* search */}
-
-        <SearchBox />
+        {/* search (not functional yet) */}
+        {/* TODO: make search functional */}
+        {/* <SearchBox /> */}
       </div>
     </div>
   );

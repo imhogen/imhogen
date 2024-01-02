@@ -65,7 +65,7 @@ export default async function Posts({
           <p className="text-sm text-gray-400 text-left opacity-50 ">
             {data.author}
             <br />
-            {`${new Date(data._createdAt).toISOString().split("T")[0]}`}
+            {new Date(data._createdAt).toISOString().split("T")[0]}
           </p>
         </div>
       </div>
@@ -77,7 +77,9 @@ export default async function Posts({
         alt="blog-card-picture"
       />
 
-      <article className={`w-full text-gray-500 text-md ${redhat.className}`}>
+      <article
+        className={`w-full text-gray-200 text-opacity-80 text-md ${redhat.className}`}
+      >
         <PortableText
           content={data.content}
           // serializers={PortableTextComponent}

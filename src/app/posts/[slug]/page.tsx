@@ -58,6 +58,7 @@ export default async function Posts({
           alt="author-image"
           height={50}
           width={50}
+          priority
           className="rounded-full"
         />
 

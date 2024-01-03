@@ -5,6 +5,7 @@ import PortableText from "react-portable-text";
 import Image from "next/image";
 import { machina, redhat } from "@/app/components/exports";
 import notFound from "@/app/not-found";
+import readingTime from "reading-time";
 
 async function getPostDetails(slug: string) {
   // const query = `*[_type == "blog" && slug.current == "${slug}"][0]`;
@@ -36,10 +37,13 @@ export default async function Posts({
 }) {
   const data = (await getPostDetails(params.slug)) as BlogPost;
 
-  const wordsPerMinute = 200;
-  const numberOfWords = data.content.toString().split(/\s/g).length;
-  const minutes = Math.ceil(numberOfWords / wordsPerMinute);
-  console.log(minutes, numberOfWords);
+  const text = data.content
+    .map((block: { children: any[] }) =>
+      block.children.map((child) => child.text).join(" ")
+    )
+    .join(" ");
+
+  const stats = readingTime(text);
 
   // if (!data) {
   //   notFound();
@@ -66,7 +70,8 @@ export default async function Posts({
           <p className="text-sm text-gray-400 text-left opacity-50 ">
             {data.author}
             <br />
-            {new Date(data._createdAt).toISOString().split("T")[0]}
+            {new Date(data._createdAt).toISOString().split("T")[0]} .{" "}
+            {stats.text}
           </p>
         </div>
       </div>

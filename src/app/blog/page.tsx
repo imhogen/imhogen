@@ -42,13 +42,14 @@ export default async function page() {
           {data.map((posts) => (
             <article
               key={posts._id}
-              className={`w-full flex-1 p-3 h-full bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
+              className={`flex-1 p-3 h-full  bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
             >
               <Image
-                className="rounded-lg w-full h-64"
+                className="rounded-lg w-full h-56"
                 src={posts.imageUrl}
                 height={500}
                 width={500}
+                priority
                 alt="blog-card-picture"
               />
               <div className="  flex-col justify-center items-start gap-2 flex">

@@ -26,11 +26,7 @@ async function getProjects() {
 export const revalidate = 60;
 export default async function page() {
   const data = (await getProjects()) as BlogPost[];
-  console.log(
-    data !== null
-      ? "this is the part you do not see for my blog page"
-      : "this is where you get to know about my weakness"
-  );
+
   return (
     <Shell
       className="flex min-h-screen flex-col  justify-center items-center  relative top-20 overflow-x-hidden overflow-y-hidden
@@ -45,7 +41,7 @@ export default async function page() {
               className={`flex-1 p-3 h-full  bg-white rounded-lg flex-col justify-center items-start gap-4 inline-flex ${redhat.className}`}
             >
               <Image
-                className="rounded-lg w-full h-56"
+                className="rounded-lg w-full h-full"
                 src={posts.imageUrl}
                 height={500}
                 width={500}

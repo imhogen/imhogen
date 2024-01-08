@@ -86,7 +86,8 @@ const Footer = () => {
         <div
           className={`text-white text-opacity-70 text-sm leading-[21px] ${redhat.className}`}
         >
-          &copy; 2023 IMHO. All rights reserved.
+          &copy; {new Date().getFullYear()} {"  "}
+          IMHO. All rights reserved.
         </div>
         <div className="justify-start items-center gap-5 flex">
           {socialMedia.map((icons) => (

@@ -36,7 +36,7 @@ export async function POST(request: Request) {
   }
   await resend.emails.send({
     from: "Contact form <onboarding@resend.dev>",
-    to: "admin@imhogen.com",
+    to: "imhogen22@gmail.com",
     subject: "Message from contact form",
     react: React.createElement(EmailTemplate, {
       firstname: firstname as string,

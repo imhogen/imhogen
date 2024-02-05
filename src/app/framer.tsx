@@ -30,7 +30,6 @@ const Motion: React.FC<MotionComponentProps> = ({
     threshold: 0.1,
   });
 
-  console.log("InView:", inView);
   return (
     <motion.div
       initial="hidden"

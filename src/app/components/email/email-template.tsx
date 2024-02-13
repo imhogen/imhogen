@@ -49,10 +49,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Heading className="text-orange-400 font-machina text-sm font-normal text-left p-0 my-[30px] mx-0">
               Message from <strong>{`${firstname} ${lastname}`}</strong>
             </Heading>
-
             <Hr className=" mx-0 w-full" />
             <Text className="text-[#666666] font-redhat text-lg text-left leading-[24px]">
               {email}
+            </Text>{" "}
+            <br />
+            <Text className="text-[#666666] font-redhat text-lg text-left leading-[24px]">
               {message}
             </Text>
           </Container>

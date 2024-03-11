@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Footer from "./components/footer/footer";
-import { redhat, machina, calligraffitti } from "./components/exports";
 import Navbar from "./components/navigation/desktop-navigation";
 import Dropdown from "./components/navigation/mobile-navigation";
 import Slider from "./components/navigation/tablet-navigation";

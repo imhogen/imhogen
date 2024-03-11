@@ -1,11 +1,15 @@
 import { client } from "@/app/components/lib/sanity";
 import React from "react";
 import { BlogPost } from "../../../../Types";
-import PortableText from "react-portable-text";
+
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+
 import Image from "next/image";
 import { machina, redhat } from "@/app/components/exports";
 import notFound from "@/app/not-found";
 import readingTime from "reading-time";
+
+import { urlFor } from "@/app/components/lib/sanity-image-url";
 
 async function getPostDetails(slug: string) {
   // const query = `*[_type == "blog" && slug.current == "${slug}"][0]`;
@@ -35,15 +39,18 @@ export default async function Posts({
     slug: string;
   };
 }) {
-  const data = (await getPostDetails(params.slug)) as BlogPost;
+  const data = (await getPostDetails(params?.slug)) as BlogPost;
+  // console.log(data.content);
+  // const text = data.content
+  //   .map((block: { children: any[] }) =>
+  //     block.children
+  //       .filter((child) => child?.text?.trim()) // Filter empty or trimmed text
+  //       .map((child) => child.text)
+  //       .join(" ")
+  //   )
+  //   .join(" ");
 
-  const text = data.content
-    .map((block: { children: any[] }) =>
-      block.children.map((child) => child.text).join(" ")
-    )
-    .join(" ");
-
-  const stats = readingTime(text);
+  // const stats = readingTime(text);
 
   // if (!data) {
   //   notFound();
@@ -53,7 +60,7 @@ export default async function Posts({
       <h1
         className={`text-center text-xl md:text-2xl lg:text-4xl tracking-tight leading-relaxed text-gray-100 ${machina.className}`}
       >
-        {data.title}
+        {data?.title}
       </h1>
 
       <div className="flex justify-center gap-5">
@@ -68,16 +75,16 @@ export default async function Posts({
 
         <div className="flex flex-col justify-center">
           <p className="text-sm text-gray-400 text-left opacity-50 ">
-            {data.author}
+            {data?.author}
             <br />
-            {new Date(data._createdAt).toISOString().split("T")[0]} .{" "}
-            {stats.text}
+            {new Date(data?._createdAt).toISOString().split("T")[0]} .{" "}
+            {/* {stats.text} */}
           </p>
         </div>
       </div>
       <Image
         className=" rounded-lg "
-        src={data.imageUrl}
+        src={data?.imageUrl}
         height={800}
         width={800}
         alt="blog-card-picture"
@@ -87,10 +94,27 @@ export default async function Posts({
         className={`w-full text-gray-200 text-opacity-80 text-md ${redhat.className}`}
       >
         <PortableText
-          content={data.content}
-          // serializers={PortableTextComponent}
+          value={data?.content}
+          components={PortableTextComponent}
         />
       </article>
     </main>
   );
 }
+
+const PortableTextComponent: Partial<PortableTextReactComponents> = {
+  types: {
+    image: ({ value }: any) => {
+      return (
+        <div className="relative w-full h-96 m-10 mx-auto">
+          <Image
+            className="object-contain"
+            src={urlFor(value).url()}
+            alt="Image "
+            fill
+          />
+        </div>
+      );
+    },
+  },
+};

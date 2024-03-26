@@ -41,16 +41,18 @@ export default async function Posts({
 }) {
   const data = (await getPostDetails(params?.slug)) as BlogPost;
   // console.log(data.content);
-  // const text = data.content
-  //   .map((block: { children: any[] }) =>
-  //     block.children
-  //       .filter((child) => child?.text?.trim()) // Filter empty or trimmed text
-  //       .map((child) => child.text)
-  //       .join(" ")
-  //   )
-  //   .join(" ");
+  //estimate reading time
+  const text = data.content
+    .filter((block: { children?: any[] }) => block.children) // Check if block has children
+    .map((block: { children: any[] }) =>
+      block.children
+        .filter((child) => child && "text" in child && child.text.trim()) // Check if child exists and has a text property
+        .map((child) => child.text)
+        .join(" ")
+    )
+    .join(" ");
 
-  // const stats = readingTime(text);
+  const stats = readingTime(text);
 
   // if (!data) {
   //   notFound();
@@ -78,7 +80,7 @@ export default async function Posts({
             {data?.author}
             <br />
             {new Date(data?._createdAt).toISOString().split("T")[0]} .{" "}
-            {/* {stats.text} */}
+            {stats.text}
           </p>
         </div>
       </div>

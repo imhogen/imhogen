@@ -1,14 +1,9 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
-
 import "./globals.css";
 
-import Footer from "./components/footer/footer";
-import Navbar from "./components/navigation/desktop-navigation";
-import Dropdown from "./components/navigation/mobile-navigation";
-import Slider from "./components/navigation/tablet-navigation";
 interface RootLayoutProps {
   children: React.ReactNode;
-  hideNavAndFooter?: boolean;
 }
 
 export const metadata: Metadata = {
@@ -16,20 +11,22 @@ export const metadata: Metadata = {
   description: "Engineering Design Company",
 };
 
-export default function RootLayout({
-  children,
-  hideNavAndFooter = false,
-}: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={``}>
-        <Navbar />
-        <Dropdown />
-        <Slider />
-
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   );
 }

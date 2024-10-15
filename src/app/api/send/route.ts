@@ -1,5 +1,5 @@
-import { EmailTemplate } from "@/app/components/email/email-template";
-import { writeFile, mkdirSync, existsSync } from "fs";
+import { EmailTemplate } from "@/components/email/email-template";
+import { existsSync, mkdirSync, writeFile } from "fs";
 import { NextResponse } from "next/server";
 import { join } from "path";
 import React from "react";

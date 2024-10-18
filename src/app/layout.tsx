@@ -20,7 +20,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
-            enableSystem
+            enableSystem={false}
+            forcedTheme="dark"
             disableTransitionOnChange
           >
             {children}

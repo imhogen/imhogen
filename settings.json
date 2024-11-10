@@ -1,0 +1,158 @@
+
+{ 
+  "javascript.memoryLimit": 8192, 
+  "editor.inlineSuggest.enabled": true, 
+  "editor.lineHeight": 2.5, 
+  "editor.cursorBlinking": "expand", 
+  "editor.cursorWidth": 3, 
+  "editor.cursorSmoothCaretAnimation": "on", 
+  "editor.smoothScrolling": true, 
+  "terminal.integrated.smoothScrolling": true, 
+  "editor.fontLigatures": true, 
+  "[typescriptreact]": { 
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+  }, 
+  "importSorter.generalConfiguration.sortOnBeforeSave": true, 
+  "importSorter.importStringConfiguration.quoteMark": "double", 
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimit", 
+  "importSorter.importStringConfiguration.tabType": "tab", 
+  "importSorter.importStringConfiguration.trailingComma": "multiLine", 
+  "importSorter.sortConfiguration.customOrderingRules.rules": [ 
+    { 
+      "type": "importMember", 
+      "regex": "^$", 
+      "orderLevel": 10, 
+      "disableSort": true, 
+    }, 
+    { 
+      "regex": "^@/+", 
+      "orderLevel": 30 
+    }, 
+    { 
+      "regex": "^~/+", 
+      "orderLevel": 30 
+    }, 
+    { 
+      "regex": "^[.]", 
+      "orderLevel": 40 
+    } 
+  ], 
+  "editor.tabSize": 2, 
+  "editor.codeActionsOnSave": { 
+    "source.fixAll": "always", 
+    "source.fixAll.eslint": "always", 
+    "source.organizeImports": "always", 
+  }, 
+  "editor.minimap.autohide": true, 
+  "editor.minimap.scale": 2, 
+  "editor.minimap.renderCharacters": false, 
+  "[json]": { 
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+  }, 
+  "explorer.confirmDragAndDrop": false, 
+  "editor.formatOnSave": true, 
+  "figma.autocompleteBlocks": true, 
+  "editor.accessibilitySupport": "off", 
+  "css.lint.unknownAtRules": "ignore", 
+  "[css]": { 
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+  }, 
+  "terminal.integrated.defaultProfile.windows": "Git Bash", 
+  "editor.fontSize": 17, 
+  "javascript.updateImportsOnFileMove.enabled": "always", 
+  "git.confirmSync": false, 
+  "[typescript]": { 
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+  }, 
+  "githubPullRequests.pushBranch": "always", 
+  "typescript.updateImportsOnFileMove.enabled": "always", 
+  "sonarlint.pathToNodeExecutable": "/opt/homebrew/opt/node@18/bin/node", 
+  "githubPullRequests.createOnPublishBranch": "never", 
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", 
+  "editor.stickyScroll.enabled": true, 
+  "terminal.integrated.fontSize": 14, 
+  "terminal.integrated.cursorBlinking": true, 
+  "explorer.confirmDelete": false, 
+  "githubPullRequests.pullBranch": "never", 
+  "files.autoSave": "onFocusChange", 
+  "workbench.tree.indent": 10, 
+  "[jsonc]": { 
+    "editor.defaultFormatter": "vscode.json-language-features" 
+  }, 
+  // Minimalist settings 
+  "editor.hideCursorInOverviewRuler": true, 
+  "editor.overviewRulerBorder": false, 
+  "editor.scrollbar.horizontal": "hidden", 
+  "editor.scrollbar.vertical": "hidden", 
+  "color-highlight.markRuler": false, 
+  "breadcrumbs.enabled": false, 
+  "workbench.iconTheme": "material-icon-theme", 
+  "material-icon-theme.folders.theme": "classic", 
+  "material-icon-theme.folders.color": "#26a69a", 
+  "material-icon-theme.activeIconPack": "angular_ngrx", 
+  // Customization 
+  // "apc.font.family": "Iosevka Extended", 
+  "apc.parts.font.family": { 
+    "titlebar": "CommitMonoV143 ExtLt", 
+    "sidebar": "CommitMonoV143 ExtLt", 
+    "statusbar": "CommitMonoV143 ExtLt", 
+    "tabs": "CommitMonoV143 ExtLt", 
+    "auxiliarybar": "CommitMonoV143 ExtLt", 
+    "banner": "CommitMonoV143 ExtLt", 
+  }, 
+  // settings for apc 
+  "apc.stylesheet": {}, 
+  // "apc.activityBar": { 
+  //   "size": 30, 
+  // }, 
+  // end of settings for apc 
+  "editor.formatOnType": true, 
+  "explorer.compactFolders": false, 
+  "workbench.sideBar.location": "right", 
+  "vim.hlsearch": true, 
+  "vim.smartRelativeLine": true, 
+  "window.autoDetectColorScheme": true, 
+  "workbench.preferredLightColorTheme": "GitHub Light Default", 
+  "workbench.preferredDarkColorTheme": "Bearded Theme Anthracite", 
+  "git.autofetch": true,
+
+"editor.fontWeight": "300", 
+  "typescript.referencesCodeLens.enabled": true, 
+  "typescript.referencesCodeLens.showOnAllFunctions": true, 
+  "workbench.productIconTheme": "fluent-icons", 
+  "errorLens.gutterIconsEnabled": true, 
+  "github.copilot.enable": { 
+    "*": false, 
+    "plaintext": true, 
+    "markdown": true, 
+    "scminput": false 
+  }, 
+  "terminal.integrated.env.osx": {}, 
+  "console-ninja.featureSet": "Community", 
+  "prisma.showPrismaDataPlatformNotification": false, 
+  "editor.linkedEditing": true, 
+  "github.copilot.editor.enableAutoCompletions": true, 
+  "inlineChat.experimental.textButtons": true, 
+  "supermaven.otherWarning": false, 
+  "codeium.enableConfig": { 
+    "*": false 
+  }, 
+  "supermaven.allowGitignore": true, 
+  "explorer.fileNesting.patterns": { 
+    "*.ts": "${capture}.js", 
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts", 
+    "*.jsx": "${capture}.js", 
+    "*.tsx": "${capture}.ts", 
+    "tsconfig.json": "tsconfig.*.json", 
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb", 
+    "*.sqlite": "${capture}.${extname}-*", 
+    "*.db": "${capture}.${extname}-*", 
+    "*.sqlite3": "${capture}.${extname}-*", 
+    "*.db3": "${capture}.${extname}-*", 
+    "*.sdb": "${capture}.${extname}-*", 
+    "*.s3db": "${capture}.${extname}-*" 
+  }, 
+  "workbench.externalBrowser": "arc", 
+  "fonted.font": "CommitMonoV143 ExtLt", 
+  "editor.defaultFormatter": "esbenp.prettier-vscode", 
+}
